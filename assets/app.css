@@ -1,0 +1,195 @@
+:root {
+  --color__primary: rgba(84, 39, 39, 1);
+  /* #542727; */
+  --color__white: #fff;
+  --color__black: #111;
+  --gradient__bg: linear-gradient(to right, var(--color__primary) 0%, var(--color__primary) 50%, var(--color__white) 50%, var(--color__white) 100%);
+  --gradient__fg: linear-gradient(to right, var(--color__white) 0%, var(--color__white) 50%, var(--color__primary) 50%, var(--color__primary) 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color__white: #d8d8d8;
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter.var.woff2') format('woff-variations');
+  font-weight: 100 700;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'slnt' -20;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--color__black);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color__white);
+  background: var(--gradient__bg);
+  transition: all 1s ease-in-out;
+}
+
+.page.gradient--reverse {
+  background: var(--gradient__fg);
+}
+
+.switch {
+  background: var(--gradient__fg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page.gradient--reverse .switch {
+  background: var(--gradient__bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.me {
+  position: relative;
+  display: block;
+  max-width: 10rem;
+  margin: 0 auto;
+  /* border-radius: 50%; */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  opacity: .7;
+  transform: rotate(180deg);
+  transition: all 2s ease;
+}
+
+.me:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+  animation: fix 4s ease-in-out forwards;
+}
+
+@keyframes fix {
+  0% {
+    opacity: .7;
+    transform: rotate(180deg);
+  }
+  25% {
+    opacity: .85;
+    transform: rotate(90deg);
+  }
+  45% {
+    opacity: .85;
+    transform: rotate(90deg);
+  }
+  96% {
+    opacity: 1;
+    transform: rotate(-12deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+h1 {
+  position: relative;
+  color: var(--color__white);
+  font-size: 2rem;
+  font-weight: 500;
+  font-variation-settings: 'wght' 800, 'slnt' 0;
+  line-height: 1;
+  text-shadow: 2px 2px 5px rgba(8, 9, 67, 0.4);
+}
+
+.yoda-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.yoda-grid:hover .yoda-2 {
+  order: 3;
+}
+
+.copy {
+  width: max-content;
+  margin: 0 auto;
+  padding: 0.25rem 1rem;
+  font-size: .85rem;
+  font-variation-settings: 'slnt' 0;
+  color: var(--color__white);
+  background-color: var(--color__black);
+}
+
+strong {
+  font-weight: 700;
+  font-variation-settings: 'wght' 800, 'slnt' -20;
+}
+
+::selection {
+  background-color: #111;
+  color: #fff;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text :focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
