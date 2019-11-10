@@ -33,7 +33,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://drim.test",
+  "start_url": "https://drim.io",
   "display": "standalone",
   "background_color": "#542727",
   "theme_color": "#542727"
