@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<script>(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MRVM5GS');</script>
+	<script defer>(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MRVM5GS');</script>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,11 @@
 <body>
 	<div class="page">
 		<div class="wrapper">
-			<img src="/assets/levon.jpg" alt="Levon Avetyan" class="me">
+			<picture class="photo">
+				<source srcset="/assets/levon.webp" type="image/webp">
+				<source srcset="/assets/levon.jpg" type="image/jpeg">
+				<img src="/assets/levon.jpg" alt="Levon Avetyan">
+			</picture>
 			<h1 class="switch" tabindex="0">Hi. I'm Levon</h1>
 			<p class="switch">
 				I am a <strong>web developer</strong> who likes creating different types of websites and applications
