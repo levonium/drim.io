@@ -12,39 +12,6 @@
 	<meta name="description" content="Creating Unique Fine Things That Live On The Internet |> Web Developer |> Levon Avetyan">
 
 	<script defer>(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MRVM5GS');</script>
-	<script src="assets/app.js" defer></script>
-	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.2/dist/alpine.js" defer></script>
-	<script defer>
-		function layout() {
-			return {
-				content: null,
-				projectsFetched: false,
-				close() { this.content = null },
-				showProjects() {
-					this.projectsFetched || this.fetchProjects()
-					this.content = 'work'
-				},
-				fetchProjects() {
-					fetch('/assets/projects/projects.json')
-						.then(response => response.json())
-						.then(projects => {
-							renderProjects(projects)
-							this.projectsFetched = true
-						})
-				}
-			}
-		}
-		const renderProject = ({ name, title, type }) => {
-			return `<div class="project ${type}">
-					<img src="/assets/projects/screenshots/${name}.jpg" alt="${name}-project">
-					<a href="https://${name}">${title}</a>
-				</div>`
-		}
-		const renderProjects = (projects) => {
-			const projectsHtml = Array.from(projects).map(project => renderProject(project)).join('')
-			document.querySelector('.projects').innerHTML = projectsHtml
-		}
-	</script>
 
 	<link rel="stylesheet" href="assets/app.css">
 	<link rel="canonical" href="https://drim.io/">
@@ -67,7 +34,7 @@
 </head>
 
 <body>
-	<div class="page" :class="{ 'has-content': content }" x-data="layout()">
+	<div class="page" :class="{ 'has-content': content }" x-data="DRIM.layout()">
 		<header class="header">
 			<picture class="photo">
 				<source srcset="/assets/levon.webp" type="image/webp">
@@ -100,6 +67,8 @@
 			</div>
 		</main>
 	</div>
-</body>
 
+	<script src="assets/app.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.2/dist/alpine.js" defer></script>
+</body>
 </html>

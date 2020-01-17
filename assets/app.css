@@ -217,6 +217,7 @@ h2 {
   height: 100%;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   background: rgba(0,0,0,.6);
   color: #fff;
   font-size: 1.25rem;
@@ -284,6 +285,64 @@ h2 {
   background-color: transparent;
   border: 0 none;
   cursor: pointer;
+}
+
+.project-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: rgba(0,0,0,.78);
+  z-index: 9;
+}
+.project-popup > section {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 1rem;
+  box-shadow: 0 0 0 .5px rgba(3,42,60,.2),0 0 0 1px rgba(3,42,60,.1),0 14px 28px rgba(3,42,60,.25),0 10px 10px rgba(3,42,60,.22);
+  border: 1px solid var(--color__white);
+  border-radius: 4px;
+}
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  background: linear-gradient(rgba(3,42,60,0), rgba(3,42,60,.05)),#fff;
+}
+.project-action {
+  display: block;
+  height: 1.5rem;
+  padding: 0.125rem 0.5rem;
+  text-align: center;
+  font-size: .8rem;
+  color: var(--color__black);
+  background: linear-gradient(#fff, hsla(0,0%,100%,.1));
+  box-shadow: 0 1px 2px rgba(3,42,60,.1),0 .25px 0 1px #e0e3e7;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.project-action svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: var(--color__primary);
+  stroke-width: 2px;
+  vertical-align: -2px;
+}
+.project-url {
+  width: 20rem;
+}
+.project-popup iframe {
+  width: 100%;
+  height: calc(100% - 2.5rem);
+  background-color: #fff;
+  border-radius: 0 0 3px 3px;
 }
 
 .hidden {
