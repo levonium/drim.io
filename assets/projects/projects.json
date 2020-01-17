@@ -1,0 +1,42 @@
+[
+  {
+    "name": "lavetis.es",
+    "title": "L'Avetis",
+    "type": "quad"
+  },
+  {
+    "name": "seocentury.com",
+    "title": "SEO Century",
+    "type": "double-h"
+  },
+  {
+    "name": "studioseed.net",
+    "title": "Studio SEED",
+    "type": ""
+  },
+  {
+    "name": "royalproduction.am",
+    "title": "Royal Production",
+    "type": "double-v"
+  },
+  {
+    "name": "barcelonaventures.com",
+    "title": "Barcelona Ventures",
+    "type": ""
+  },
+  {
+    "name": "dinomatic.com",
+    "title": "DinoMatic",
+    "type": "quad"
+  },
+  {
+    "name": "learnmarkdown.com",
+    "title": "Learning Markdown",
+    "type": ""
+  },
+  {
+    "name": "preferredts.com",
+    "title": "Preferred Travel Services",
+    "type": ""
+  }
+]
