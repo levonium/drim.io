@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-	<script defer>(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MRVM5GS');</script>
+	<link rel="preconnect" href="https://www.google-analytics.com">
+	<link rel="preconnect" href="https://www.googletagmanager.com">
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Levon Avetyan |> Web Developer |> DRIM.IO</title>
 	<meta name="description" content="Creating Unique Fine Things That Live On The Internet |> Web Developer |> Levon Avetyan">
+
+	<script defer>(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MRVM5GS');</script>
 
 	<link rel="stylesheet" href="assets/app.css">
 	<link rel="canonical" href="https://drim.io/">
@@ -21,7 +24,7 @@
 	<link rel="apple-touch-icon" href="/assets/icons/drim-152.png">
 	<meta name="theme-color" content="#542727" />
 
-	<meta property="og:title" content="Levon Avetyan : Web Developer : DRIM.IO">
+	<meta property="og:title" content="Levon Avetyan |> Web Developer |> DRIM.IO">
 	<meta property="og:description" content="Creating Unique Fine Things That Live On The Internet">
 	<meta property="og:image" content="https://drim.io/assets/levon.jpg">
 	<meta property="og:url" content="https://drim.io/">
@@ -31,23 +34,41 @@
 </head>
 
 <body>
-	<div class="page">
-		<div class="wrapper">
+	<div class="page" :class="{ 'has-content': content }" x-data="DRIM.layout()">
+		<header class="header">
 			<picture class="photo">
 				<source srcset="/assets/levon.webp" type="image/webp">
 				<source srcset="/assets/levon.jpg" type="image/jpeg">
 				<img src="/assets/levon.jpg" alt="Levon Avetyan">
 			</picture>
-			<h1 class="switch" tabindex="0">Hi. I'm Levon</h1>
-			<p class="switch">
+			<h1 class="color__reversed">Hi. I'm Levon</h1>
+			<p class="bio color__reversed">
 				I am a <strong>web developer</strong> who likes creating different types of websites and applications
 				from the simplest to the most sophisticated designs and functionalities.
 			</p>
+
 			<p class="rect">Email me at levon [at] drim [dot] io</p>
-		</div>
+
+			<button class="show-projects" :class="{ 'hidden': content === 'work' }"
+				:aria-expanded="content === 'work' ? 'true' : 'false'"
+				aria-label="RECENT PROJECTS"
+				@click="showProjects()" @mouseenter.once="fetchProjects()">
+				<span class="color__reversed">RECENT PROJECTS</span>
+			</button>
+			<button class="hide-projects hidden" :class="{ 'hidden': !content }" @click="close()">X</button>
+		</header>
+
+		<main class="content">
+			<div x-ref="work" class="work"
+				:class="{ 'hidden': content !== 'work' }"
+				:aria-hidden="content === 'work' ? 'false' : 'true'">
+				<h2>Recent Projects</h2>
+				<div class="projects"></div>
+			</div>
+		</main>
 	</div>
 
 	<script src="assets/app.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.2/dist/alpine.js" defer></script>
 </body>
-
 </html>
