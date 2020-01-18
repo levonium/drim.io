@@ -1,6 +1,6 @@
 'use strict'
 
-const CACHE_NAME = 'site-cache-v0.4'
+const CACHE_NAME = 'site-cache-v0.5'
 
 self.addEventListener('install', (e) => {
   self.skipWaiting()
@@ -21,17 +21,16 @@ self.addEventListener('activate', (e) => {
 })
 
 self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    fetch(e.request)
+  if (e.request.url !== 'https://www.statcounter.com/counter/counter.js') {
+    e.respondWith(
+      fetch(e.request)
       .then((response) => {
-        const responseClone = response.clone()
-        caches
-          .open(CACHE_NAME)
-          .then(cache => {
-            cache.put(e.request, responseClone)
-          })
-        return response
-      })
-      .catch(error => caches.match(e.request).then(res => res))
-  )
+          const responseClone = response.clone()
+          caches.open(CACHE_NAME)
+          .then(cache => cache.put(e.request, responseClone))
+          return response
+        })
+        .catch(error => caches.match(e.request).then(res => res))
+    )
+  }
 })
