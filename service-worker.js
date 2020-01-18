@@ -21,16 +21,14 @@ self.addEventListener('activate', (e) => {
 })
 
 self.addEventListener('fetch', (e) => {
-  if (e.request.url !== 'https://www.statcounter.com/counter/counter.js') {
-    e.respondWith(
-      fetch(e.request)
-      .then((response) => {
-          const responseClone = response.clone()
-          caches.open(CACHE_NAME)
+  e.respondWith(
+    fetch(e.request)
+    .then((response) => {
+        const responseClone = response.clone()
+        caches.open(CACHE_NAME)
           .then(cache => cache.put(e.request, responseClone))
-          return response
-        })
-        .catch(error => caches.match(e.request).then(res => res))
-    )
-  }
+        return response
+      })
+      .catch(error => caches.match(e.request).then(res => res))
+  )
 })
