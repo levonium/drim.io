@@ -29,56 +29,29 @@
 </head>
 
 <body>
-	<div class="page" :class="{ 'has-content': content }" x-data="DRIM.layout()">
-		<header class="header">
+	<div class="page">
+		<main class="main">
+
 			<picture class="photo">
 				<source srcset="/assets/levon.webp" type="image/webp">
 				<source srcset="/assets/levon.jpg" type="image/jpeg">
 				<img src="/assets/levon.jpg" alt="Levon Avetyan">
 			</picture>
-			<h1 class="color__reversed">Hi. I'm Levon</h1>
+
+			<header>
+				<h1 class="color__reversed">Hi. I'm Levon</h1>
+			</header>
+
 			<p class="bio color__reversed">
 				I am a <strong>web developer</strong> who likes creating different types of websites and applications
 				from the simplest to the most sophisticated designs and functionalities.
 			</p>
 
 			<p class="rect">Email me at levon [at] drim [dot] io</p>
-
-			<button class="show-projects" :class="{ 'hidden': content === 'work' }"
-				:aria-expanded="content === 'work' ? 'true' : 'false'"
-				aria-label="RECENT PROJECTS"
-				@click="showProjects()" @mouseenter.once="fetchProjects()">
-				<span class="color__reversed">RECENT PROJECTS</span>
-			</button>
-			<button class="hide-projects hidden" :class="{ 'hidden': !content }" @click="close()">X</button>
-		</header>
-
-		<main class="content">
-			<div x-ref="work" class="work"
-				:class="{ 'hidden': content !== 'work' }"
-				:aria-hidden="content === 'work' ? 'false' : 'true'">
-				<h2>Recent Projects</h2>
-				<div class="projects"></div>
-			</div>
 		</main>
 	</div>
 
 	<script src="assets/app.js" defer></script>
-	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.2/dist/alpine.js" defer></script>
-	<!-- Fathom - simple website analytics - https://usefathom.com -->
-	<script>
-		(function (f, a, t, h, o, m) {
-			a[h] = a[h] || function () {
-				(a[h].q = a[h].q || []).push(arguments)
-			};
-			o = f.createElement('script'),
-				m = f.getElementsByTagName('script')[0];
-			o.async = 1; o.src = t; o.id = 'fathom-script';
-			m.parentNode.insertBefore(o, m)
-		})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
-		fathom('set', 'siteId', 'RVWZBQFN');
-		fathom('trackPageview');
-	</script>
-	<!-- / Fathom -->
+	<script src="https://cdn.usefathom.com/script.js" site="RVWZBQFN" defer></script>
 </body>
 </html>
