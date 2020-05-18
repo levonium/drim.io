@@ -3,7 +3,7 @@
   if ('serviceWorker' in navigator && 'PushManager' in window) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/service-worker.js')
-        .then(reg => console.log('[Service worker registered]', reg))
+        .then(reg => console.log('[🦅] Service worker registered', reg))
     })
   }
 
@@ -15,13 +15,11 @@
       offlineWrapper.classList.add('rect', 'offline')
       offlineWrapper.appendChild(document.createTextNode('No connection, you are offline ...'))
       document.body.prepend(offlineWrapper)
-      document.querySelector('.wrapper').style.opacity = .5
     },
     online: () => {
       const offlineWrapper = document.getElementById('offlineWrapper')
       if (offlineWrapper) {
         offlineWrapper.parentElement.removeChild(offlineWrapper)
-        document.querySelector('.wrapper').style.opacity = 1
       }
     }
   }
@@ -34,8 +32,12 @@
     const styles = getComputedStyle(document.documentElement)
     const primary = styles.getPropertyValue('--color__primary')
     const white = styles.getPropertyValue('--color__white')
+    const postsFg = styles.getPropertyValue('--color__posts_fg')
+    const postsGb = styles.getPropertyValue('--color__posts_bg')
 
-    document.documentElement.style.setProperty('--color__primary', primary === '#8a4040' ? '#542727' : '#8a4040');
-    document.documentElement.style.setProperty('--color__white', white === '#fff' ? '#ddc9c9' : '#fff');
+    document.documentElement.style.setProperty('--color__primary', primary === '#8a4040' ? '#542727' : '#8a4040')
+    document.documentElement.style.setProperty('--color__white', white === '#fff' ? '#ddc9c9' : '#fff')
+    document.documentElement.style.setProperty('--color__posts_fg', postsFg === '#1A202C' ? '#ddc9c9' : '#1A202C')
+    document.documentElement.style.setProperty('--color__posts_bg', postsGb === '#f2f2f2' ? '#293242' : '#f2f2f2')
   })
 })()
