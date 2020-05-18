@@ -1,6 +1,6 @@
 'use strict'
 
-const MAIN_CACHE_NAME = 'main-cache-v0.2'
+const MAIN_CACHE_NAME = 'main-cache-v0.3'
 
 const mainCacheFiles = [
   '/offline',

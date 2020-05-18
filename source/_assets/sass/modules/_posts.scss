@@ -95,14 +95,14 @@
       span {
         display: none;
         &.save {
-          display: block;
+          display: inline-block;
         }
       }
 
       &.cached {
         span {
           &.remove {
-            display: block;
+            display: inline-block;
           }
           &.save {
             display: none;
