@@ -11,3 +11,4 @@ skipLinks: yes
 
 - [Laravel: Pagination & Caching](/posts/laravel-pagination-caching)
 - [Laravel: Database Backup Command](/posts/laravel-database-backup-command)
+- [zsh - Git Completion on Mac](/posts/zsh-git-completion-on-mac)
