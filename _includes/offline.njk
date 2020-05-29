@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "_partials/header.njk" %}
+
+<body>
+  <div class="page layout__posts">
+    <main class="main">
+
+      <header>
+        <h1>{{ title }}</h1>
+      </header>
+
+      <article id="content">
+        {{ content | safe }}
+      </article>
+    </main>
+
+    <script>
+      async function getCachedUrls () {
+        const postsSlug = window.location.origin + '/posts/'
+
+        const cache = await caches.open('posts-cache')
+        const keys = await cache.keys()
+
+        return keys
+          .filter((request, index, array) => request.url.startsWith(postsSlug))
+          .map(request => request.url)
+      }
+
+      const wrapper = document.getElementById('cached-content')
+      const replaceAll = (str, find, replace) => str.replace(new RegExp(find, 'g'), replace)
+      const urlToTitle = url => replaceAll(url.substr(url.indexOf('/posts/') + 7), '-|_|/', ' ')
+      getCachedUrls().then(urls => {
+        wrapper.innerHTML = !urls.length
+          ? 'Nothing found'
+          : `<ul>${urls.map(url => `<li><a href="${url}">${urlToTitle(url)}</a></li>`)}</ul>`
+      })
+    </script>
+
+    {% include "_partials/footer.njk" %}
+  </div>
+</body>
+</html>

@@ -1,4 +1,0 @@
-#Robots.txt file for DRIM.IO. There's nothing interesting here :(
-
-User-agent: *
-Allow: /

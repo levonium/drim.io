@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "_partials/header.njk" %}
+
+<body>
+    <div class="page layout__home">
+        <main class="main">
+          {{ content | safe }}
+        </main>
+    </div>
+
+  {% include "_partials/footer.njk" %}
+</body>
+</html>

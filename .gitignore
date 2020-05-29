@@ -4,10 +4,6 @@
 /vendor/
 /.idea/
 /.vscode/
+/_site/
 npm-debug.log
-yarn-error.log
-
-# Optional ignores
-/build_staging/
-/build_production/
-/source/assets/build/
+.DS_Store
