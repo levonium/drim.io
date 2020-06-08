@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats([
@@ -16,12 +17,19 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addShortcode('postsList', function() {
     const posts = []
-    fs.readdirSync('./posts/').forEach(file => {
-      if (file.endsWith('.md') && file !== 'index.md') {
-        posts.push(file.substr(0, file.length - 3))
+    const dir = './posts/'
+    fs.readdirSync(dir).forEach(fileName => {
+      if (fileName.endsWith('.md') && fileName !== 'index.md') {
+        const name = fileName.substr(0, fileName.length - 3)
+        const stats = fs.statSync(path.join(dir, fileName))
+        posts.push({ name, stats })
       }
     })
-    return `<ul>${posts.map(post => `<li><a href="/posts/${post}">${replaceAll(post, '-', ' ')}</a></li>`).join('')}<ul>`
+
+    // stats.mtime => modified date, stats.birthdate => created date
+    posts.sort((a,b) => b.stats.mtime.getTime() - a.stats.mtime.getTime())
+
+    return `<ul>${posts.map(post => `<li><a href="/posts/${post.name}">${replaceAll(post.name, '-', ' ')}</a></li>`).join('')}<ul>`
   })
 
   return {

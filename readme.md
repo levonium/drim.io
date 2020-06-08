@@ -7,7 +7,7 @@ My personal website https://drim.io
 npx @11ty/eleventy
 
 # watch changes
-npx @11ty/eleventy
+npx @11ty/eleventy --watch
 
 # browsersync
 npx @11ty/eleventy --serve
