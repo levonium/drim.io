@@ -83,7 +83,7 @@ public function index()
 	});
 
 	$perPage = 10;
-	$currentPage = request()->get('page', 1);
+	$currentPage = intval(request()->get('page', 1));
 
 	$posts = new LengthAwarePaginator(
 		$allPosts->forPage($currentPage, $perPage),
