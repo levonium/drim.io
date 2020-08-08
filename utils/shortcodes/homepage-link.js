@@ -1,13 +1,13 @@
 module.exports = {
   fn: (heading, subheading, section) => {
     return `
-      <div class="grid grid-cols-4 items-center text-left border-b hover:opacity-50
-         py-2 mb-4 cursor-pointer transition duration-300 ease-in-out"
+      <div class="grid grid-cols-4 items-center text-left border-b hover:opacity-50 py-2 mb-4 cursor-pointer transition duration-300 ease-in-out"
          style="border-color: var(--color__${section})"
+         x-ref="${section}_link"
          role="button" tabindex="0"
-         @click="section = '${section}'; settings = null"
-         @keydown.space="section = '${section}'; settings = null"
-         @keydown.enter="section = '${section}'; settings = null"
+         @click="openHomepageLink('${section}')"
+         @keydown.space="openHomepageLink('${section}')"
+         @keydown.enter="openHomepageLink('${section}')"
          @mouseenter.once="fetch('${section}')">
 
         <div class="row-span-2 relative text-center pl-2">

@@ -1,4 +1,4 @@
-<header class="flex items-center justify-between">
+<header class="flex items-center justify-between" x-ref="header">
 
   <div class="flex items-center justify-center rounded-full bg-blue-100 w-8 h-8 leading-none shadow-sm cursor-pointer text-gray-600 hover:text-gray-700">
     {% include '_svg/ticket.svg' %}
@@ -7,13 +7,14 @@
   <h1 class="font-bold">Hi, I'm Levon</h1>
 
   <div class="flex items-center justify-center rounded-full bg-blue-100 w-8 h-8 leading-none shadow-sm cursor-pointer text-gray-600 hover:text-gray-700">
-    <button @click="settings === 'settings' ? settings = null : settings = 'settings'">
+    <button @click="toggleSettings()" class="settings-button">
       {% include '_svg/cog.svg' %}
     </button>
 
     <div class="absolute top-0 right-0 mt-16 mr-4 z-10"
       {% pageTransition 'settings', 'settings' %}>
-      <div class="flex items-center justify-center rounded-full bg-blue-100 w-8 h-8 leading-none shadow-sm cursor-pointer text-gray-600 hover:text-gray-700">
+      <div class="flex items-center justify-center rounded-full bg-blue-100 w-8 h-8 leading-none shadow-sm cursor-pointer text-gray-600 hover:text-gray-700"
+        tabindex="0">
         {% include '_svg/ticket.svg' %}
       </div>
     </div>

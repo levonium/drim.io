@@ -18940,7 +18940,8 @@ video {
 /* purgecss start ignore */
 
 :focus, button:focus {
-  outline: solid  3px rgba(0,0,0,0.05);
+  /* outline: solid  3px rgba(0,0,0,0.05); */
+  outline: solid  3px red;
   outline-offset: 4px;
 }
 

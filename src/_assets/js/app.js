@@ -19,7 +19,7 @@ const Projects = {
   },
   renderSingle({ name, title, ext }) {
     return `<div class="project">
-      <a @click.prevent="showProjectPopup('https://${name}')" href="#">
+      <a @click.prevent="showProjectPopup('https://${name}')" href="#" class="focus:shadow-none">
         <img src="static/img/projects/${name}.${ext}" alt="${title} Project - ${name}" class="border border-gray-400 rounded shadow-lg">
       </a>
     </div>`
@@ -53,7 +53,7 @@ const Projects = {
     const closePopupButton = popupData.makeSection('#', popupData.closeIcon, [
       { attribute: 'role', value: 'button' },
       { attribute: 'aria-label', value: 'Close Project Popup' },
-      { attribute: 'x-on:click', value: 'closeWhateverIsOpen()' },
+      { attribute: 'x-on:click.prevent', value: 'closeWhateverIsOpen()' },
     ])
 
     const iframeHeader = document.createElement('header')
@@ -85,18 +85,59 @@ const Projects = {
 
 const Layout = () => ({
   section: null,
+  activeSection: null,
   settings: null,
+  projectsFetched: false,
   fetch(section) {
-    if (section === 'projects') Projects.render()
+    if (section !== 'projects') return
+
+    Projects.render()
+    this.projectsFetched = true
+  },
+  openHomepageLink(section) {
+    if (section === 'projects' && !this.projectsFetched) {
+      this.fetch(section)
+    }
+
+    this.section = section
+    this.settings = null
+
+    this.activeSection = section
+    this.$refs[section].querySelectorAll('button')[0].focus()
+    this.removeTabindex()
+  },
+  toggleSettings() {
+    if (this.settings !== null) {
+      this.settings = null
+    } else {
+      this.settings = 'settings'
+    }
   },
   showProjectPopup(url) {
     Projects.renderPopup(url)
   },
   closeWhateverIsOpen() {
-    if (DRIM.isPopupOpen) Projects.removePopup()
-    else if (this.settings !== null) this.settings = null
-    else this.section = null
+    if (DRIM.isPopupOpen) {
+      Projects.removePopup()
+    } else if (this.settings !== null) {
+      this.settings = null
+      this.$refs.header.querySelector('.settings-button').focus()
+    } else {
+      this.section = null
+      this.$refs[`${this.activeSection}_link`].focus()
+    }
+    this.setTabindex()
   },
+  removeTabindex() {
+    this.$refs.page
+      .querySelectorAll('[role="button"]', 'button', '[tabindex="0"]')
+      .forEach(el => el.setAttribute('tabindex', -1))
+  },
+  setTabindex() {
+    this.$refs.page
+      .querySelectorAll('[role="button"]', 'button', '[tabindex="-1"]')
+      .forEach(el => el.setAttribute('tabindex', 0))
+  }
 })
 
 DRIM.layout = () => Layout()
