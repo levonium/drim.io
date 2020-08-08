@@ -12,17 +12,20 @@ module.exports = {
           700: '#004098',
           800: '#003072',
           900: '#00204C',
-        }
-      }
+        },
+      },
     },
-   fill: () => ({
-     'none': 'none'
-   })
+    fill: () => ({
+      none: 'none',
+    }),
   },
   variants: {},
   plugins: [],
-  purge: process.env.NODE_ENV === 'production' ? {
-    enabled: true,
-    content: ['src/**/*.njk', 'src/**/*.js'],
-  } : {}
+  purge:
+    process.env.NODE_ENV === 'production'
+      ? {
+          enabled: true,
+          content: ['src/**/*.njk', 'src/**/*.js', 'utils/**/*.js'],
+        }
+      : {},
 }
