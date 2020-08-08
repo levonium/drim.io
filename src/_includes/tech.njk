@@ -1,0 +1,26 @@
+<section class="absolute inset-0 p-4 rounded-md gradient__white"
+  {% pageTransition 'tech', 'section' %}>
+
+  {% sectionHeader 'Technology' %}
+
+  <div class="h-full flex items-center">
+    <div class="my-4 p-2 grid__tech  w-full grid gap-2 grid-cols-3 rounded" style="background-color: var(--color__tech)">
+
+      {% for tech in [
+        'php', 'laravel', 'wordpress',
+        'mysql', 'python', 'node-js',
+        'html', 'css', 'sass',
+        'javascript', 'typescript', 'vue-js',
+        'figma', 'sketch', 'photoshop'
+        ] %}
+
+        <span class="icon__tech relative block w-full h-full p-2 border border-black rounded text-center hover:bg-black transition duration-300 ease-in-out"
+          name="{{ tech.replace('-', ' ') }}">
+          {% include '_svg/tech/' + tech + '.svg' %}
+        </span>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

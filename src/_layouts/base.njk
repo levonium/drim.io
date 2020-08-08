@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+
+    {% if site.env %}
+      {% set css %}{% include "app.css" %}{% endset %}
+      <style>
+        {{ css | safe }}
+      </style>
+    {% else %}
+    <link rel="stylesheet" href="/static/app.css">
+    {% endif %}
+  </head>
+
+  <body x-data="DRIM.layout()" @keydown.escape="closeWhateverIsOpen()">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    {{ content | safe }}
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

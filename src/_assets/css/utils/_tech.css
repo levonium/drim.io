@@ -1,0 +1,17 @@
+.grid__tech .icon__tech svg {
+  @apply w-16 h-16 max-w-full max-h-full block mx-auto transition duration-300 ease-in-out;
+}
+
+.grid__tech .icon__tech::after {
+  content: attr(name);
+  color: var(--color__tech);
+  @apply absolute inset-0 w-full h-full px-2 flex items-center justify-center font-bold text-xs uppercase opacity-0 transition duration-300 ease-in-out break-words;
+}
+
+.grid__tech .icon__tech:focus svg, .grid__tech .icon__tech:hover svg {
+  @apply opacity-0;
+}
+
+.grid__tech .icon__tech:focus:after, .grid__tech .icon__tech:hover:after {
+  @apply opacity-100;
+}
