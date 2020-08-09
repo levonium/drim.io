@@ -5,9 +5,9 @@ module.exports = {
          style="border-color: var(--color__${section})"
          x-ref="${section}_link"
          role="button" tabindex="0"
-         @click="openHomepageLink('${section}')"
-         @keydown.space="openHomepageLink('${section}')"
-         @keydown.enter="openHomepageLink('${section}')"
+         @click="openSection('${section}')"
+         @keydown.space="openSection('${section}')"
+         @keydown.enter="openSection('${section}')"
          @mouseenter.once="fetch('${section}')">
 
         <div class="row-span-2 relative text-center pl-2">
@@ -16,7 +16,7 @@ module.exports = {
           ${icon.letter(heading)}
         </div>
 
-        <h3 class="col-span-3 pl-4 font-bold text-gray-900">${heading}</h3>
+        <h3 class="col-span-3 pl-4 font-bold">${heading}</h3>
         <span class="col-span-3 pl-4 text-sm text-gray-500">${subheading}</span>
 
       </div>
@@ -38,9 +38,6 @@ const icon = {
     </svg>
   `,
   letter: (heading) => `
-    <span class="absolute inset-0 text-3xl font-bold text-center text-white leading-loose">${heading.substr(
-      0,
-      1
-    )}</span>
+    <span class="absolute inset-0 text-3xl font-bold text-center text-white leading-loose">${heading.substr(0, 1)}</span>
   `,
 }

@@ -1,6 +1,70 @@
 :root {
+  --color__body: theme('colors.gray.900');
+
   --color__about: #9FCED9;
   --color__contact: #D9A6CB;
   --color__projects: #8CA691;
   --color__tech: #EFCFCF;
+  --color__terms: #afbfc0;
+  --color__privacy: #82c485;
+}
+
+.text-body {
+  color: var(--color__body);
+}
+
+.bg-body {
+  background-color: var(--color__body);
+}
+
+.text-about {
+  color: var(--color__about);
+}
+
+.bg-about {
+  background-color: var(--color__about);
+}
+
+.text-contact {
+  color: var(--color__contact);
+}
+
+.bg-contact {
+  background-color: var(--color__contact);
+}
+
+.text-projects {
+  color: var(--color__projects);
+}
+
+.bg-projects {
+  background-color: var(--color__projects);
+}
+
+.text-tech {
+  color: var(--color__tech);
+}
+
+.bg-tech {
+  background-color: var(--color__tech);
+}
+
+.hover\:bg-tech:hover {
+  background-color: var(--color__tech);
+}
+
+.text-terms {
+  color: var(--color__terms);
+}
+
+.bg-terms {
+  background-color: var(--color__terms);
+}
+
+.text-privacy {
+  color: var(--color__privacy);
+}
+
+.bg-privacy {
+  background-color: var(--color__privacy);
 }

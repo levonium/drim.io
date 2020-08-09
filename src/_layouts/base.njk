@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include "head.njk" %}
+    {% include 'head.njk' %}
 
     {% if site.env %}
-      {% set css %}{% include "app.css" %}{% endset %}
+      {% set css %}{% include 'app.css' %}{% endset %}
       <style>
         {{ css | safe }}
       </style>
@@ -13,10 +13,14 @@
     {% endif %}
   </head>
 
-  <body x-data="DRIM.layout()" @keydown.escape="closeWhateverIsOpen()">
+  <body x-data="DRIM.layout()" x-init="init()" @keydown.escape="closeWhateverIsOpen()" :class="mode">
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    {{ content | safe }}
+    <div id="page" class="w-screen h-screen flex items-center justify-center text-body gradient__body" x-ref="page">
+      {{ content | safe }}
+    </div>
+
+    {% include 'oops.njk' %}
 
     <script src="/static/app.js"></script>
   </body>

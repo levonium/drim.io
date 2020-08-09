@@ -1,15 +1,14 @@
-<section class="absolute inset-0 p-4 rounded-md gradient__white"
-  x-ref="contact"
- {% pageTransition 'contact', 'section' %}>
+<section class="absolute inset-0 flex flex-col justify-center p-4 rounded-md gradient__main"
+  x-ref="contact" {% pageTransition 'contact', 'section' %}>
 
-  {% sectionHeader 'Contact me' %}
+  {% sectionHeading 'Contact me', 'contact' %}
 
-  <div class="h-full flex items-center">
+  <div class="flex items-center">
 
-    <div class="px-4 py-8 rounded" style="background-color: var(--color__contact)">
+    <div class="px-4 py-8 rounded">
 
-      <p class="mb-8">Thanks for taking the time to contact me.</p>
-      <p>Email me at levon [at] drim [dot] io</p>
+      <p class="mb-8">Hey, thanks for taking the time to contact me.</p>
+      <p>Email me at <br>levon [at] drim [dot] io</p>
 
     </div>
   </div>

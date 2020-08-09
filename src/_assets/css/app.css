@@ -1,20 +1,5 @@
-
 @import 'utils/_tailwind.css';
-@import 'utils/_vars.css';
-@import 'utils/_bg.scss';
-@import 'utils/_tech.css';
 @import 'utils/_accessibility.css';
-
-/* purgecss start ignore */
-
-:focus, button:focus {
-	/* outline: solid  3px rgba(0,0,0,0.05); */
-	outline: solid  3px red;
-	outline-offset: 4px;
-}
-
-a {
-	@apply text-ws-blue-500 underline;
-}
-
-/* purgecss end ignore */
+@import 'utils/_vars.css';
+@import 'utils/_misc.scss';
+@import 'utils/_tech.css';

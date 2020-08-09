@@ -3,33 +3,27 @@ layout: base.njk
 title: Levon Avetyan |> Web Developer |> DRIM.IO
 ---
 
-<div id="page" class="w-screen h-screen flex items-center justify-center gradient__body"
-  x-ref="page">
+<div class="relative w-full max-w-xs max-h-full flex flex-col py-4 mx-auto text-center bg-white rounded-md shadow-lg gradient__main">
 
-  <div class="relative w-full max-w-xs p-4 mx-auto text-center bg-white rounded-md shadow-lg gradient__white">
+  {% include 'header.njk' %}
 
-    {% include "header.njk" %}
+  <main id="main" class="relative flex-1">
 
-    <main id="main">
-
-      <picture class="">
-        <source srcset="/static/img/levon.webp" type="image/webp">
-        <source srcset="/static/img/levon.jpg" type="image/jpeg">
-        <img src="/static/img/levon.jpg" alt="Levon Avetyan" class="block mx-auto my-8 rounded-full"
-          style="height: 16vh; max-height: 180px;">
-      </picture>
+    <section class="home px-4" x-ref="home">
+      {% include 'photo.njk' %}
 
       {% homepageLink 'About me', 'Who I am & what I do', 'about' %}
       {% homepageLink 'Contact me', 'Get in touch', 'contact' %}
       {% homepageLink 'Recent Projects', 'Some of my recent projects', 'projects' %}
       {% homepageLink 'Technology', 'Tech stack I use', 'tech', 'mb-0' %}
+    </section>
 
-      {% include "about.njk" %}
-      {% include "contact.njk" %}
-      {% include "projects.njk" %}
-      {% include "tech.njk" %}
+    {% include 'about.njk' %}
+    {% include 'contact.njk' %}
+    {% include 'projects.njk' %}
+    {% include 'tech.njk' %}
+    {% include 'terms.njk' %}
+    {% include 'privacy.njk' %}
 
-    </main>
-  </div>
-
+  </main>
 </div>

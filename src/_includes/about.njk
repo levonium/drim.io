@@ -1,11 +1,10 @@
-<section class="absolute inset-0 p-4 rounded-md gradient__white"
-  x-ref="about"
-  {% pageTransition 'about', 'section' %}>
+<section class="absolute inset-0 flex flex-col justify-center p-4 rounded-md gradient__main"
+  x-ref="about" {% pageTransition 'about', 'section' %}>
 
-  {% sectionHeader 'About me' %}
+  {% sectionHeading 'About me', 'about' %}
 
-  <div class="h-full flex items-center text-left">
-    <div class="px-4 py-8 rounded" style="background-color: var(--color__about)">
+  <div class="flex items-center text-left">
+    <div class="px-4 py-8 rounded">
 
       <p class="mb-4">
         I am a <strong>web development</strong> enthusiast who spares most of his time working on multiple projects and learning something new every passing day.
@@ -15,7 +14,7 @@
         I've been doing web development quite a long time now and hope to do it for even a longer time.
       </p>
       <p>
-        <a href="#" @click="section = 'contact'">Get in touch</a> and let's start your next success project together.
+        <a href="#" @click.prevent="openSection('contact')">Get in touch</a> and let's start your next success project together.
       </p>
 
     </div>
