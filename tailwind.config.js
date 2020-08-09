@@ -16,7 +16,7 @@ module.exports = {
     process.env.NODE_ENV === 'production'
       ? {
           enabled: true,
-          content: ['src/**/*.njk', 'src/**/*.js', 'utils/**/*.js'],
+          content: ['src/**/*.njk', 'src/**/*.svg', 'src/**/*.js', 'utils/**/*.js'],
         }
       : {},
 }
