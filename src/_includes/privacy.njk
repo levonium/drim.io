@@ -1,16 +1,16 @@
 <section class="absolute inset-0 flex flex-col justify-center p-4 rounded-md gradient__main"
   x-ref="privacy" {% pageTransition 'privacy', 'section' %}>
 
-  {% sectionHeading 'Privacy Policy', 'privacy' %}
+  {% sectionHeading 'privacy', i18n.privacy.heading %}
 
   <div class="flex items-center text-left">
     <div class="w-full px-4 py-8 rounded">
 
-      <p class="mb-4">
-        This website doesn't do anything fancy, it's a simple HTML file, no privacy concerns.
+      <p class="mb-4" data-en="{{ i18n.privacy.s1.en }}" data-es="{{ i18n.privacy.s1.es }}">
+        {{ i18n.privacy.s1.en }}
       </p>
-      <p class="mb-4">
-        No cookies, no Google analytics, no tracking ✋
+      <p class="mb-4" data-en="{{ i18n.privacy.s2.en }}" data-es="{{ i18n.privacy.s2.es }}">
+        {{ i18n.privacy.s2.en }}
       </p>
 
     </div>

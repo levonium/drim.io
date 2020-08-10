@@ -1,20 +1,20 @@
 <section class="absolute inset-0 flex flex-col justify-center p-4 rounded-md gradient__main"
   x-ref="about" {% pageTransition 'about', 'section' %}>
 
-  {% sectionHeading 'About me', 'about' %}
+  {% sectionHeading 'about', i18n.about.heading %}
 
   <div class="flex items-center text-left">
     <div class="px-4 py-8 rounded">
 
-      <p class="mb-4">
-        I am a <strong>web development</strong> enthusiast who spares most of his time working on multiple projects and learning something new every passing day.
-        I like creating different types of websites and applications from the simplest to the most sophisticated designs and functionalities.
+      <p class="mb-4" data-en="{{ i18n.about.s1.en }}" data-es="{{ i18n.about.s1.es }}">
+        {{ i18n.about.s1.en | safe }}
       </p>
-      <p class="mb-4">
-        I've been doing web development quite a long time now and hope to do it for even a longer time.
+      <p class="mb-4" data-en="{{ i18n.about.s2.en }}" data-es="{{ i18n.about.s2.es }}">
+        {{ i18n.about.s2.en | safe }}
       </p>
       <p>
-        <a href="#" @click.prevent="openSection('contact')">Get in touch</a> and let's start your next success project together.
+        <a href="#" @click.prevent="openSection('contact')" data-en="{{ i18n.about.s3.en }}" data-es="{{ i18n.about.s3.es }}">{{ i18n.about.s3.en | safe }}</a>
+        <span data-en="{{ i18n.about.s4.en }}" data-es="{{ i18n.about.s4.es }}">{{ i18n.about.s4.en | safe }}</span>
       </p>
 
     </div>

@@ -12,17 +12,20 @@ const Projects = {
   },
   render: async () => {
     const projects = await Projects.fetch()
-    const projectsHtml = Array.from(projects)
-      .map(project => Projects.renderSingle(project))
-      .join('')
-    document.getElementById('projects').innerHTML = projectsHtml
+    const projectsHtml = Array.from(projects).map(project => Projects.renderSingle(project))
+    const projectsWrapper = document.getElementById('projects')
+
+    projectsWrapper.querySelectorAll('div[data-project]')
+      .forEach(el => {
+        el.innerHTML = projectsHtml[el.dataset.project]
+        el.classList.remove('w-16', 'h-16')
+      })
   },
   renderSingle({ name, title, ext }) {
-    return `<div class="project">
+    return `
       <a @click.prevent="showProjectPopup('https://${name}')" href="#" class="focus:shadow-none">
         <img src="static/img/projects/${name}.${ext}" alt="${title} Project - ${name}" class="border border-gray-400 rounded shadow-lg">
-      </a>
-    </div>`
+      </a>`
   },
   renderPopup(url) {
     Projects.removePopup()
@@ -85,16 +88,24 @@ const Projects = {
 
 const Layout = () => ({
   mode: '',
+  lang: 'en',
   menu: null,
   section: null,
   activeSection: null,
   settings: null,
   projectsFetched: false,
   init() {
-    this.mode = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light-mode' : 'dark-mode'
+    this.mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode'
   },
   switchMode() {
     this.mode = this.mode === 'light-mode' ? 'dark-mode' : 'light-mode'
+  },
+  translate() {
+    const lang = this.$refs.page.dataset.translateTo
+    this.$refs.page.dataset.translateTo = lang === 'en' ? 'es' : 'en'
+    this.lang = lang
+    this.$refs.page.querySelectorAll('[data-en]')
+      .forEach(el => { el.innerHTML = el.dataset[lang] })
   },
   fetch(section) {
     if (section !== 'projects') return
@@ -125,17 +136,19 @@ const Layout = () => ({
   showProjectPopup(url) {
     Projects.renderPopup(url)
   },
-  closeWhateverIsOpen() {
+  closeWhateverIsOpen(escapeKey = false) {
     if (DRIM.isPopupOpen) {
       Projects.removePopup()
     } else if (this.menu !== null) {
       this.menu = null
     } else if (this.settings !== null) {
       this.settings = null
-      this.$refs.header.querySelector('.button--toggle-settings').focus()
+      if (escapeKey) {
+        this.$refs.header.querySelector('.button--toggle-settings').focus()
+      }
     } else if (this.section !== null) {
       this.section = null
-      if (this.$refs[`${this.activeSection}_link`]) {
+      if (escapeKey && this.$refs[`${this.activeSection}_link`]) {
         this.$refs[`${this.activeSection}_link`].focus()
       }
     }
@@ -156,15 +169,19 @@ const Layout = () => ({
 DRIM.layout = () => Layout()
 window.DRIM = DRIM
 
-DRIM.orientationChange = (angle) => {
+DRIM.orientationChange = () => {
   const wrapper = document.getElementById('oops')
-  angle !== 0
+  const orientationAngle = window.orientation !== undefined
+    ? window.orientation
+    : window.screen.orientation.angle
+  orientationAngle !== 0
     ? wrapper.classList.remove('opacity-0', 'translate-x-full')
     : wrapper.classList.add('opacity-0', 'translate-x-full')
 }
-window.addEventListener('load', () => DRIM.orientationChange(window.screen.orientation.angle))
-window.addEventListener('orientationchange', (e) => DRIM.orientationChange(window.screen.orientation.angle))
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+window.addEventListener('load', () => DRIM.orientationChange())
+window.addEventListener('orientationchange', () => DRIM.orientationChange())
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
   document.body.classList.toggle('light-mode')
   document.body.classList.toggle('dark-mode')
 })

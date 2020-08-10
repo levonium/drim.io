@@ -13,10 +13,11 @@
     {% endif %}
   </head>
 
-  <body x-data="DRIM.layout()" x-init="init()" @keydown.escape="closeWhateverIsOpen()" :class="mode">
+  <body x-data="DRIM.layout()" x-init="init()" @keydown.escape="closeWhateverIsOpen(true)" :class="mode">
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <div id="page" class="w-screen h-screen flex items-center justify-center text-body gradient__body" x-ref="page">
+    <div id="page" class="w-screen h-screen flex items-center justify-center text-body gradient__body"
+      x-ref="page" data-translate-to="es">
       {{ content | safe }}
     </div>
 

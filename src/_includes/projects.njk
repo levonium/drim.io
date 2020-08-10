@@ -1,23 +1,14 @@
 <section class="absolute inset-0 flex flex-col justify-center p-4 rounded-md gradient__main"
   x-ref="projects" {% pageTransition 'projects', 'section' %}>
 
-  {% sectionHeading 'Recent Projects', 'projects' %}
+  {% sectionHeading 'projects', i18n.projects.heading %}
 
   <div class="flex items-center text-left">
     <div id="projects" class="w-full p-4 grid gap-4 grid-cols-3 items-center justify-center">
 
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
-      <div class="h-16 w-16 rounded shadow bg-projects"></div>
+      {% for i in range(0, 10) %}
+        <div class="w-16 h-16 rounded shadow bg-projects" data-project="{{ i }}"></div>
+      {% endfor %}
 
     </div>
   </div>

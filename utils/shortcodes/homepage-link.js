@@ -1,5 +1,5 @@
 module.exports = {
-  fn: (heading, subheading, section) => {
+  fn: (section, i18n) => {
     return `
       <div class="grid grid-cols-4 items-center text-left border-b hover:opacity-50 py-2 mb-4 cursor-pointer transition duration-300 ease-in-out"
          style="border-color: var(--color__${section})"
@@ -13,11 +13,11 @@ module.exports = {
         <div class="row-span-2 relative text-center pl-2">
           ${icon.bg()}
           ${icon.fg(section)}
-          ${icon.letter(heading)}
+          ${icon.letter(section)}
         </div>
 
-        <h3 class="col-span-3 pl-4 font-bold">${heading}</h3>
-        <span class="col-span-3 pl-4 text-sm text-gray-500">${subheading}</span>
+        <h3 class="col-span-3 pl-4 font-bold" data-en="${i18n.heading.en}" data-es="${i18n.heading.es}">${i18n.heading.en}</h3>
+        <span class="col-span-3 pl-4 text-sm text-gray-500"  data-en="${i18n.subheading.en}" data-es="${i18n.subheading.es}">${i18n.subheading.en}</span>
 
       </div>
     `
@@ -37,7 +37,7 @@ const icon = {
       <path fill="var(--color__${section})" d="M62.3,-51.9C75.2,-33.5,76.4,-7.9,70.1,14.6C63.9,37.1,50.2,56.5,32.4,63.8C14.5,71.1,-7.6,66.3,-28.4,57C-49.2,47.7,-68.8,33.9,-74,15.6C-79.2,-2.7,-70,-25.6,-55.2,-44.3C-40.5,-63.1,-20.2,-77.8,2.2,-79.6C24.7,-81.4,49.4,-70.2,62.3,-51.9Z" transform="translate(100 100)" />
     </svg>
   `,
-  letter: (heading) => `
-    <span class="absolute inset-0 text-3xl font-bold text-center text-white leading-loose">${heading.substr(0, 1)}</span>
+  letter: (section) => `
+    <span class="absolute inset-0 text-3xl font-bold text-center text-white leading-loose uppercase">${section.substr(0, 1)}</span>
   `,
 }

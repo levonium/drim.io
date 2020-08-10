@@ -12,10 +12,10 @@ title: Levon Avetyan |> Web Developer |> DRIM.IO
     <section class="home px-4" x-ref="home">
       {% include 'photo.njk' %}
 
-      {% homepageLink 'About me', 'Who I am & what I do', 'about' %}
-      {% homepageLink 'Contact me', 'Get in touch', 'contact' %}
-      {% homepageLink 'Recent Projects', 'Some of my recent projects', 'projects' %}
-      {% homepageLink 'Technology', 'Tech stack I use', 'tech', 'mb-0' %}
+      {% homepageLink 'about', i18n.about %}
+      {% homepageLink 'contact', i18n.contact %}
+      {% homepageLink 'projects', i18n.projects %}
+      {% homepageLink 'tech', i18n.tech %}
     </section>
 
     {% include 'about.njk' %}

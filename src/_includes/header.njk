@@ -13,7 +13,7 @@
       {% include 'nav.njk' %}
   </div>
 
-  <h1 class="font-bold">Hi, I'm Levon</h1>
+  <h1 class="font-bold" data-en="{{ i18n.title.en }}" data-es="{{ i18n.title.es }}">{{ i18n.title.en }}</h1>
 
   <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm">
     <button class="button--toggle-settings h-full w-full flex items-center justify-center"
@@ -23,6 +23,18 @@
 
     <div class="absolute top-0 right-0 mt-16 mr-4 z-10"
     {% pageTransition 'settings', 'settings' %}>
+
+      <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm mb-2">
+        <button class="button--toggle-lang h-full w-full flex items-center justify-center" @click="translate()" aria-label="Translate">
+          <span data-lang="es" :class="{ 'hidden': lang === 'es' }">
+            {% include '_svg/es.svg' %}
+          </span>
+          <span data-lang="en" :class="{ 'hidden': lang === 'en' }">
+            {% include '_svg/en.svg' %}
+          </span>
+        </button>
+      </div>
+
       <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm">
         <button class="button--toggle-mode h-full w-full flex items-center justify-center" @click="switchMode()" aria-label="Switch Dark/Light Mode">
           <span class="transform transition duration-300 ease-in-out" :class="{ 'rotate-180': mode === 'dark-mode' }">
@@ -30,6 +42,7 @@
           </span>
         </button>
       </div>
+
     </div>
   </div>
 </header>
