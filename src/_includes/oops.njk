@@ -1,20 +1,22 @@
-<div id="oops" class="fixed inset-0 bg-gray-200 z-50 flex flex-col items-center justify-center text-center p-8
+<div id="oops" class="fixed inset-0 gradient__body z-50 flex flex-col items-center justify-center text-center p-8
   transform translate-x-full opacity-0 transition duration-300 ease-in-out">
 
   <p class="font-bold text-2xl">❌</p>
-  <p class="font-bold text-2xl">Oops, what have <u>you</u> done?</p>
-  <p>You discovered the truth now, here it goes.</p>
 
-  <p class="mt-8 px-8 italic text-red-700">
-    This website doesn't <strong>work</strong> on landscape mode ...
-    <br>
-    and I'm <strong>lazy enough</strong> to leave it like this.
+  <p class="font-bold text-2xl" data-en="{{ i18n.oops.s1.en }}" data-es="{{ i18n.oops.s1.es }}">
+    {{ i18n.oops.s1.en | safe }}
   </p>
 
-  <p class="mt-4">
-    So please, switch to portrait mode now 🙌
-    <br>
-    and never ever rotate it back 😉
+  <p data-en="{{ i18n.oops.s2.en }}" data-es="{{ i18n.oops.s2.es }}">
+    {{ i18n.oops.s2.en | safe }}
+  </p>
+
+  <p class="mt-8 px-8 italic text-red-700" data-en="{{ i18n.oops.s3.en }}" data-es="{{ i18n.oops.s3.es }}">
+      {{ i18n.oops.s3.en | safe }}
+  </p>
+
+  <p class="mt-4" data-en="{{ i18n.oops.s4.en }}" data-es="{{ i18n.oops.s4.es }}">
+    {{ i18n.oops.s4.en | safe }}
   </p>
 
 </div>

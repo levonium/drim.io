@@ -115,4 +115,26 @@ module.exports = {
       es: 'Sin cookies, sin Google Analytics, sin seguimiento ✋',
     },
   },
+  oops: {
+    s1: {
+      en: 'Oops, what have <u>you</u> done?',
+      es: 'Ups, ¿qué has hecho?',
+    },
+    s2: {
+      en: 'You discovered the truth now, here it goes.',
+      es: 'Descubriste la verdad ahora, aquí va.',
+    },
+    s3: {
+      en:
+        "This website doesn't <strong>work</strong> on landscape mode ... <br> and I'm <strong>lazy enough</strong> to leave it like this.",
+      es:
+        'Esta página no <strong>funciona</strong> en modo horizontal ... <br> y soy <strong>perezoso suficientemente</strong> para dejarla así.',
+    },
+    s4: {
+      en:
+        'So please, switch to portrait mode now 🙌 <br> and never ever rotate it back 😉',
+      es:
+        'Así que, por favor, cambia al modo retrato ahora 🙌 y nunca jamás lo volvas a girar 😉',
+    },
+  },
 }

@@ -18,10 +18,11 @@
 
     <div id="page" class="w-screen h-screen flex items-center justify-center text-body gradient__body"
       x-ref="page" data-translate-to="es">
-      {{ content | safe }}
-    </div>
 
-    {% include 'oops.njk' %}
+      {{ content | safe }}
+
+      {% include 'oops.njk' %}
+    </div>
 
     <script src="/static/app.js"></script>
   </body>
