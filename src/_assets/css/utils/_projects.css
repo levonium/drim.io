@@ -1,0 +1,23 @@
+.single-project.empty {
+  @apply w-16 h-16;
+}
+
+.single-project img {
+  @apply border border-gray-400 rounded shadow-lg;
+}
+
+.project-popup {
+  @apply absolute inset-0 h-full mt-2 bg-gray-300 border-t z-10;
+}
+
+.project-iframe-header {
+  @apply flex justify-between p-2;
+}
+
+.project-iframe-header svg {
+  @apply w-4 h-4 fill-none stroke-current;
+}
+
+.project-action {
+  @apply flex items-center py-1 px-2 text-center text-sm font-light rounded shadow no-underline border;
+}

@@ -18,13 +18,13 @@ const Projects = {
     projectsWrapper.querySelectorAll('div[data-project]')
       .forEach(el => {
         el.innerHTML = projectsHtml[el.dataset.project]
-        el.classList.remove('w-16', 'h-16')
+        el.classList.remove('empty')
       })
   },
   renderSingle({ name, title, ext }) {
     return `
-      <a @click.prevent="showProjectPopup('https://${name}')" href="#" class="focus:shadow-none">
-        <img src="static/img/projects/${name}.${ext}" alt="${title} Project - ${name}" class="border border-gray-400 rounded shadow-lg">
+      <a @click.prevent="showProjectPopup('https://${name}')" href="#">
+        <img src="static/img/projects/${name}.${ext}" alt="${title} Project - ${name}">
       </a>`
   },
   renderPopup(url) {
@@ -32,14 +32,14 @@ const Projects = {
 
     const popupData = {
       wrapper: document.getElementById('projects').parentElement,
-      urlIcon: '<svg viewBox="0 0 24 24" class="w-4 h-4 fill-none stroke-current" style="stroke-width: 2px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>',
-      closeIcon: '<svg viewBox="0 0 100 100" class="w-4 h-4 fill-none stroke-current" style="stroke-width: 6px;"><polygon points="77.6,21.1 49.6,49.2 21.5,21.1 19.6,23 47.6,51.1 19.6,79.2 21.5,81.1 49.6,53 77.6,81.1 79.6,79.2   51.5,51.1 79.6,23 "/></svg>',
+      urlIcon: '<svg viewBox="0 0 24 24" style="stroke-width: 2px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>',
+      closeIcon: '<svg viewBox="0 0 100 100" style="stroke-width: 6px;"><polygon points="77.6,21.1 49.6,49.2 21.5,21.1 19.6,23 47.6,51.1 19.6,79.2 21.5,81.1 49.6,53 77.6,81.1 79.6,79.2   51.5,51.1 79.6,23 "/></svg>',
       makeSection: (href, anchor, atts = []) => {
         const tag = document.createElement('a')
-        tag.classList.add('flex', 'items-center', 'py-1', 'px-2', 'text-center', 'text-sm', 'font-light', 'rounded', 'shadow', 'no-underline', 'border')
+        tag.classList.add('project-action')
         tag.href = href
         tag.innerHTML = anchor
-        if (atts.length) atts.forEach(attr => tag.setAttribute(attr.attribute, attr.value))
+        if (atts.length) atts.forEach(attObj => tag.setAttribute(attObj.attribute, attObj.value))
         return tag
       }
     }
@@ -60,7 +60,7 @@ const Projects = {
     ])
 
     const iframeHeader = document.createElement('header')
-    iframeHeader.classList.add('flex', 'justify-between', 'p-2', 'gradient__main')
+    iframeHeader.classList.add('project-iframe-header', 'gradient__main')
     iframeHeader.appendChild(urlIcon)
     iframeHeader.appendChild(addressBar)
     iframeHeader.appendChild(closePopupButton)
@@ -72,9 +72,9 @@ const Projects = {
     iframe.style.width = '100%'
 
     const projectPopup = document.createElement('section')
-    projectPopup.classList.add('project-popup', 'absolute', 'inset-0', 'mt-2', 'bg-gray-300', 'border-t', 'z-10')
-    projectPopup.appendChild(iframeHeader)
+    projectPopup.classList.add('project-popup')
     projectPopup.appendChild(iframe)
+    projectPopup.appendChild(iframeHeader)
 
     popupData.wrapper.appendChild(projectPopup)
     DRIM.isPopupOpen = true

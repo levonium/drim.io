@@ -6,15 +6,19 @@
   <div class="flex items-center text-left">
     <div class="px-4 py-8 rounded">
 
-      <p class="mb-4" data-en="{{ i18n.about.s1.en }}" data-es="{{ i18n.about.s1.es }}">
+      <p class="mb-4" data-en="{{ i18n.about.s1.en | safe }}" data-es="{{ i18n.about.s1.es | safe }}">
         {{ i18n.about.s1.en | safe }}
       </p>
-      <p class="mb-4" data-en="{{ i18n.about.s2.en }}" data-es="{{ i18n.about.s2.es }}">
+      <p class="mb-4" data-en="{{ i18n.about.s2.en | safe }}" data-es="{{ i18n.about.s2.es | safe }}">
         {{ i18n.about.s2.en | safe }}
       </p>
       <p>
-        <a href="#" @click.prevent="openSection('contact')" data-en="{{ i18n.about.s3.en }}" data-es="{{ i18n.about.s3.es }}">{{ i18n.about.s3.en | safe }}</a>
-        <span data-en="{{ i18n.about.s4.en }}" data-es="{{ i18n.about.s4.es }}">{{ i18n.about.s4.en | safe }}</span>
+        <a href="#" @click.prevent="openSection('contact')" data-en="{{ i18n.about.s3.en | safe }}" data-es="{{ i18n.about.s3.es | safe }}">
+          {{ i18n.about.s3.en | safe }}
+        </a>
+        <span data-en="{{ i18n.about.s4.en | safe }}" data-es="{{ i18n.about.s4.es | safe }}">
+          {{ i18n.about.s4.en | safe }}
+        </span>
       </p>
 
     </div>

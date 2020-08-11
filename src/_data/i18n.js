@@ -30,7 +30,7 @@ module.exports = {
       en:
         'I am a <strong>web development</strong> enthusiast who spares most of his time working on multiple projects and learning something new every passing day. I like creating different types of websites and applications from the simplest to the most sophisticated designs and functionalities.',
       es:
-        'Soy un entusiasta de diseño y desarrollo web que pasa la mayor parte de su tiempo trabajando en múltiples proyectos y aprendiendo algo nuevo cada día. Me gusta crear sitios web y aplicaciones de diferentes tipos, desde los diseños y funcionalidades más simples hasta los más sofisticados.',
+        'Soy un entusiasta de <strong>diseño y desarrollo web</strong> que pasa la mayor parte de su tiempo trabajando en múltiples proyectos y aprendiendo algo nuevo cada día. Me gusta crear sitios web y aplicaciones de diferentes tipos, desde los diseños y funcionalidades más simples hasta los más sofisticados.',
     },
     s2: {
       en:
@@ -92,7 +92,7 @@ module.exports = {
     },
     s1: {
       en: 'No terms 🤯',
-      es: 'Sin ningun términos',
+      es: 'Sin ningun términos 🤯',
     },
     s2: {
       en: "You're allowed to do whatever you like, no terms apply.",
@@ -128,7 +128,7 @@ module.exports = {
       en:
         "This website doesn't <strong>work</strong> on landscape mode ... <br> and I'm <strong>lazy enough</strong> to leave it like this.",
       es:
-        'Esta página no <strong>funciona</strong> en modo horizontal ... <br> y soy <strong>perezoso suficientemente</strong> para dejarla así.',
+        'Esta página no <strong>funciona</strong> en modo horizontal ... <br> y soy <strong>suficientemente perezoso</strong> para dejarla así.',
     },
     s4: {
       en:

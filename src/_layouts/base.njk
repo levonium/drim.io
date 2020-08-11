@@ -5,9 +5,7 @@
 
     {% if site.env %}
       {% set css %}{% include 'app.css' %}{% endset %}
-      <style>
-        {{ css | safe }}
-      </style>
+      <style>{{ css | safe }}</style>
     {% else %}
     <link rel="stylesheet" href="/static/app.css">
     {% endif %}
