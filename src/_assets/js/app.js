@@ -24,7 +24,7 @@ const Projects = {
   renderSingle({ name, title, ext }) {
     return `
       <a @click.prevent="showProjectPopup('https://${name}')" href="#">
-        <img src="static/img/projects/${name}.${ext}" alt="${title} Project - ${name}">
+        <img src="static/img/projects/${name}.${ext}" alt="${title} Project - ${name}" title="${title} - ${name}">
       </a>`
   },
   renderPopup(url) {
@@ -96,6 +96,9 @@ const Layout = () => ({
   projectsFetched: false,
   init() {
     this.mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode'
+
+    const lang = navigator.language || navigator.userLanguage
+    if (lang && lang.startsWith('es')) this.translate()
   },
   switchMode() {
     this.mode = this.mode === 'light-mode' ? 'dark-mode' : 'light-mode'
@@ -167,21 +170,29 @@ const Layout = () => ({
 })
 
 DRIM.layout = () => Layout()
-window.DRIM = DRIM
 
 DRIM.orientationChange = () => {
   const wrapper = document.getElementById('oops')
-  const orientationAngle = window.orientation !== undefined
-    ? window.orientation
-    : window.screen.orientation.angle
+  let orientationAngle = 0
+
+  if (window.orientation !== undefined) {
+    orientationAngle = window.orientation
+  }
+  if (!orientationAngle && window.screen?.orientation?.angle !== undefined) {
+    orientationAngle = window.screen.orientation.angle
+  }
   orientationAngle !== 0
     ? wrapper.classList.remove('opacity-0', 'translate-x-full')
     : wrapper.classList.add('opacity-0', 'translate-x-full')
 }
-window.addEventListener('load', () => DRIM.orientationChange())
-window.addEventListener('orientationchange', () => DRIM.orientationChange())
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+DRIM.colorModeChange = () => {
   document.body.classList.toggle('light-mode')
   document.body.classList.toggle('dark-mode')
-})
+}
+
+window.DRIM = DRIM
+
+window.addEventListener('load', () => DRIM.orientationChange())
+window.addEventListener('orientationchange', () => DRIM.orientationChange())
+window.matchMedia('(prefers-color-scheme: dark)').addListener(DRIM.colorModeChange)

@@ -24,21 +24,21 @@
     <div class="absolute top-0 right-0 mt-16 mr-4 z-10"
     {% pageTransition 'settings', 'settings' %}>
 
-      <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm mb-2">
+      <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm">
+        <button class="button--toggle-mode h-full w-full flex items-center justify-center" @click="switchMode()" aria-label="Switch Dark/Light Mode">
+          <span class="transform transition duration-300 ease-in-out" :class="{ 'rotate-180': mode === 'dark-mode' }">
+            {% include '_svg/adjust.svg' %}
+          </span>
+        </button>
+      </div>
+
+      <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm mt-2">
         <button class="button--toggle-lang h-full w-full flex items-center justify-center" @click="translate()" aria-label="Translate">
           <span data-lang="es" :class="{ 'hidden': lang === 'es' }">
             {% include '_svg/es.svg' %}
           </span>
           <span data-lang="en" :class="{ 'hidden': lang === 'en' }">
             {% include '_svg/en.svg' %}
-          </span>
-        </button>
-      </div>
-
-      <div class="w-8 h-8 bg-blue-100 rounded-full shadow-sm">
-        <button class="button--toggle-mode h-full w-full flex items-center justify-center" @click="switchMode()" aria-label="Switch Dark/Light Mode">
-          <span class="transform transition duration-300 ease-in-out" :class="{ 'rotate-180': mode === 'dark-mode' }">
-            {% include '_svg/adjust.svg' %}
           </span>
         </button>
       </div>
