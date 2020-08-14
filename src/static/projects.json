@@ -1,32 +1,7 @@
 [
   {
-    "name": "lavetis.es",
-    "title": "L'Avetis",
-    "ext": "jpg"
-  },
-  {
     "name": "seocentury.com",
     "title": "SEO Century",
-    "ext": "png"
-  },
-  {
-    "name": "generativeways.com",
-    "title": "Generative Ways",
-    "ext": "png"
-  },
-  {
-    "name": "royalproduction.am",
-    "title": "Royal Production",
-    "ext": "jpg"
-  },
-  {
-    "name": "barcelonaventures.com",
-    "title": "Barcelona Ventures",
-    "ext": "jpg"
-  },
-  {
-    "name": "dinomatic.com",
-    "title": "DinoMatic",
     "ext": "png"
   },
   {
@@ -35,14 +10,9 @@
     "ext": "png"
   },
   {
-    "name": "preferredts.com",
-    "title": "Preferred Travel Services",
+    "name": "royalproduction.am",
+    "title": "Royal Production",
     "ext": "jpg"
-  },
-  {
-    "name": "oddsconverter.pro",
-    "title": "Odds Converter",
-    "ext": "png"
   },
   {
     "name": "manera.am",
@@ -50,8 +20,43 @@
     "ext": "png"
   },
   {
+    "name": "dinomatic.com",
+    "title": "DinoMatic",
+    "ext": "png"
+  },
+  {
+    "name": "lavetis.es",
+    "title": "L'Avetis",
+    "ext": "jpg"
+  },
+  {
+    "name": "barcelonaventures.com",
+    "title": "Barcelona Ventures",
+    "ext": "jpg"
+  },
+  {
+    "name": "preferredts.com",
+    "title": "Preferred Travel Services",
+    "ext": "jpg"
+  },
+  {
+    "name": "generativeways.com",
+    "title": "Generative Ways",
+    "ext": "png"
+  },
+  {
+    "name": "oddsconverter.pro",
+    "title": "Odds Converter",
+    "ext": "png"
+  },
+  {
     "name": "usbettingoffers.com",
     "title": "US Betting Offers",
     "ext": "jpg"
+  },
+  {
+    "name": "sportsbetting777.com",
+    "title": "Sports Betting 777",
+    "ext": "png"
   }
 ]
