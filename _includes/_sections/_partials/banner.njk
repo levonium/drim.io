@@ -1,0 +1,39 @@
+<div class="container mx-auto px-4 py-24">
+
+  <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 items-center py-32">
+
+    <div class="lg:col-span-2 bio">
+
+      <h2 class="mt-0 mb-8 text-5xl">
+        <span lang="en">Hi, I'm Levon</span>
+        <span lang="es">¡Hola! Soy Levon</span>
+      </h2>
+
+      <p class="mb-12">
+        <span lang="en">
+          I am a web development enthusiast who spares most of his time working on multiple projects and learning something new every passing day. I like creating different types of websites and applications from the simplest to the most sophisticated designs and functionalities.
+        </span>
+        <span lang="es">
+          Soy un entusiasta de desarrollo web que pasa la mayor parte de su tiempo trabajando en múltiples proyectos y aprendiendo algo nuevo cada día. Me gusta crear sitios web y aplicaciones de diferentes tipos, desde los diseños y funcionalidades más simples hasta los más sofisticados.
+        </span>
+      </p>
+
+      <p class="text-center lg:text-left">
+        <a class="no-underline py-2 px-8 text-2xl border border-gray-400 rounded bg-transparent hover:bg-gray-900 cursor-pointer transition duration-300 ease-in-out inline-block"
+          href="#" @click.prevent="scroll('contacts')">
+          <span lang="en">Get in Touch</span>
+          <span lang="es">Ponte en contacto</span>
+        </a>
+      </p>
+    </div>
+
+    <picture>
+      <source srcset="assets/images/levon.webp" type="image/webp">
+      <source srcset="assets/images/levon.jpg" type="image/jpeg">
+      <img src="assets/images/levon.jpg" alt="Levon Avetyan"
+        class="photo block mx-auto rounded-full shadow-lg opacity-75">
+    </picture>
+
+  </div>
+
+</div>

@@ -1,0 +1,50 @@
+<section id="contacts" class="bg__pattern py-32">
+  <div class="container mx-auto p-4">
+
+    {% sectionHeading 'Get in Touch', 'Ponte en contacto', 'contact' %}
+
+    <div id="contacts-wrapper" class="contacts-wrapper grid gap-4 mx-auto">
+
+      <p class="text-left text-lg mb-4">
+        <span lang="en">Send me an email at <span class="underline">levon [@] drim [.] io</span> or submit the form below.</span>
+        <span lang="es">Envíame un email a <span class="underline">levon [@] drim [.] io</span> o rellena el formulario.</span>
+      </p>
+
+      <form class="text-left lg:pr-64" netlify>
+
+        <div class="grid gap-8 grid-cols-1 lg:grid-cols-2">
+
+          <fieldset>
+            <label for="name" class="block mb-8 text-base font-bold uppercase">
+              <span lang="en">Name</span>
+              <span lang="es">Nombre</span>
+              <input type="text" id="name" class="block w-full mt-1 px-2 py-2 text-base border border-gray-400 rounded bg-gray-200 text-gray-900"
+                placeholder="The doctor" required>
+            </label>
+
+            <label for="email" class="block mb-8 text-base font-bold uppercase">
+              <span lang="en">Email</span>
+              <span lang="es">Correo electrónico</span>
+              <input type="email" id="email" class="block w-full mt-1 px-2 py-2 text-base border border-gray-400 rounded bg-gray-200 text-gray-900"
+                placeholder="doctor@gallifray.com" required>
+            </label>
+
+            <button id="submit"
+              class="py-2 text-2xl border border-gray-400 rounded bg-gray-900 hover:bg-transparent cursor-pointer transition duration-300 ease-in-out flex items-center justify-center w-full">
+              <span lang="en">Send</span>
+              <span lang="es">Enviar</span>
+            </button>
+          </fieldset>
+
+          <label for="message" class="block mb-8 text-base font-bold uppercase">
+            <span lang="en">Message</span>
+            <span lang="es">Mensaje</span>
+            <textarea id="message" class="block w-full h-full px-2 py-2 mt-1 text-base border border-gray-400 rounded bg-gray-200 text-gray-900"
+              placeholder="Bow ties are cool." required></textarea>
+          </label>
+      </form>
+
+    </div>
+
+  </div>
+</section>
