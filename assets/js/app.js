@@ -2,21 +2,22 @@ const DRIM = {}
 
 const Projects = {
   fetch: async () => {
-    const response = await window.fetch('assets/projects/_list.json')
+    const response = await window.fetch('/assets/projects/_list.json')
     const json = await response.json()
     return json
   },
   render: async () => {
     const projects = await Projects.fetch()
     const html = Array.from(projects).map(project => Projects.renderSingle(project))
-    document.getElementById('projects-wrapper').innerHTML = html.join('')
+    const wrapper = document.getElementById('projects-wrapper')
+    if (wrapper) wrapper.innerHTML = html.join('')
   },
   renderSingle: ({ name, title, ext }) => {
     return `
       <a href="https://${name}" target="_blank" rel="noopener noreferrer"
         class="relative flex items-center justify-center pb-4 overflow-hidden"
         data-name="${title}">
-        <img src="assets/projects/${name}.${ext}" class="block shadow"
+        <img src="/assets/projects/${name}.${ext}" class="block shadow"
           alt="${title} Project - ${name}" title="${title} - ${name}">
       </a>`;
   }
@@ -38,7 +39,7 @@ const Tech = {
     { name: 'python', url: 'https://python.org' },
   ],
   fetch: async () => {
-    const fetchSingleIcon = name => fetch(`assets/tech/${name}.svg`)
+    const fetchSingleIcon = name => fetch(`/assets/tech/${name}.svg`)
     return await Promise.all(
       Tech.icons.map(async({ name, url }) => {
         const res = await fetchSingleIcon(name)
@@ -50,7 +51,8 @@ const Tech = {
   render: async () => {
     const icons = await Tech.fetch()
     const html = icons.map(icon => Tech.renderSingle(icon))
-    document.getElementById('tech-wrapper').innerHTML = html.join('')
+    const wrapper = document.getElementById('tech-wrapper')
+    if (wrapper) wrapper.innerHTML = html.join('')
   },
   renderSingle: ({ name, icon, url }) => {
     return `
@@ -95,6 +97,6 @@ const Layout = () => ({
 })
 
 document.addEventListener('scroll', () => {
-  document.getElementById('header')
-    .classList[window.scrollY >= 64 ? 'add' : 'remove']('bg-gray-900')
+  const header = document.getElementById('header')
+  header && header.classList[window.scrollY >= 64 ? 'add' : 'remove']('bg-gray-900')
 })

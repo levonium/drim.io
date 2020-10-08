@@ -6,7 +6,12 @@ module.exports = {
   purge: {
     enabled: true,
     preserveHtmlElements: false,
-    content: ["./_site/**/*.html", "./assets/js/app.js"],
+    content: [
+      "./**/*.njk",
+      "./.eleventy.js",
+      "./_includes/*.svg",
+      "./assets/js/app.js",
+    ],
   },
   theme: {
     extend: {
@@ -14,8 +19,8 @@ module.exports = {
         main: "'IBM Plex Sans', sans-serif",
       },
       opacity: {
-        1: "0.01"
-      }
+        1: "0.01",
+      },
     },
   },
   variants: {},
