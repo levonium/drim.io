@@ -1,7 +1,7 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 20 20"
-  class="text-gray-200 p-px rounded-full w-12 h-12"
+  class="text-gray-200 p-px rounded-full w-12 h-12 p-px"
   style="background: var(--color__main);"
 >
   <path

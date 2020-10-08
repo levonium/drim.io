@@ -9,7 +9,7 @@ module.exports = {
     content: [
       "./**/*.njk",
       "./.eleventy.js",
-      "./_includes/*.svg",
+      "./_includes/**/*.svg",
       "./assets/js/app.js",
     ],
   },

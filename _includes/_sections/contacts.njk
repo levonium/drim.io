@@ -10,7 +10,8 @@
         <span lang="es">Envíame un email a <span class="underline">levon [@] drim [.] io</span> o rellena el formulario.</span>
       </p>
 
-      <form class="text-left lg:pr-64" name="contact-form" method="POST" data-netlify="true">
+      <form class="text-left lg:pr-64" method="POST" action="/success"
+        name="contact-form" data-netlify="true">
 
         <div class="grid gap-8 grid-cols-1 lg:grid-cols-2">
 
@@ -42,6 +43,8 @@
             <textarea id="message" name="message" class="block w-full h-full px-2 py-2 mt-1 text-base border border-gray-400 rounded bg-gray-200 text-gray-900"
               placeholder="Bow ties are cool." required></textarea>
           </label>
+
+        </div>
       </form>
 
     </div>

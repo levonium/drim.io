@@ -13,13 +13,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addNunjucksShortcode('menuItem', function (textEn, textEs, anchor) {
     return `
-      <li class="hidden lg:block px-4">
-        <a href="#" id="${anchor}-button" class="uppercase font-bold"
-          @click.prevent="scroll('${anchor}')">
-          <span lang="en">${textEn}</span>
-          <span lang="es">${textEs}</span>
-        </a>
-      </li>
+        <li class="hidden lg:block px-4">
+          <a href="#" id="${anchor}-button" class="uppercase font-bold"
+            @click.prevent="scroll('${anchor}')">
+            <span lang="en">${textEn}</span>
+            <span lang="es">${textEs}</span>
+          </a>
+        </li>
     `
   })
 
