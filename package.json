@@ -1,22 +1,12 @@
 {
   "name": "drim.io",
-  "version": "2.0.0",
+  "version": "46.0",
   "description": "drim.io website",
-  "main": "app.js",
   "scripts": {
-    "styles": "npx tailwindcss build assets/css/source.css -o assets/css/app.css",
-    "styles:prod": "NODE_ENV=production npm run styles",
-    "styles:minify": "./node_modules/.bin/cleancss -o assets/css/app.css assets/css/app.css",
-    "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "watch": "npx @11ty/eleventy --serve --watch",
-    "production": "npm run styles:prod && npm run styles:minify && npm run build"
+    "production": "cp index.html _site/ && cp 404.html _site/ && cp googleeb7b01ca72467036.html _site/ && cp robots.txt _site && cp humans.txt _site && cp -r assets _site/"
   },
   "author": "levonium",
   "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "clean-css-cli": "^4.3.0",
-    "tailwindcss": "^1.8.11"
-  },
+  "devDependencies": {},
   "dependencies": {}
 }
