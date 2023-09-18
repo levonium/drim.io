@@ -169,21 +169,24 @@
 
 			--box-cols: repeat(3, calc((100vw - var(--used-space)) / 9));
 			--fz: calc((100vw - var(--used-space)) / 18);
-		}
-		@media (orientation: landscape) {
-			:root {
-				--box-cols: repeat(3, calc((100vh - var(--used-space)) / 9));
-				--fz: calc((100vh - var(--used-space)) / 18);
+
+			@media (prefers-color-scheme: dark) {
+				& {
+					--color-bg-body: #111827;
+					--color-font-body: #F8FAFC;
+					--color-bg-board: #F1F5F9;
+					--color-bg-cell: #253351;
+				}
+			}
+
+			@media (orientation: landscape) {
+				& {
+					--box-cols: repeat(3, calc((100vh - var(--used-space)) / 9));
+					--fz: calc((100vh - var(--used-space)) / 18);
+				}
 			}
 		}
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--color-bg-body: #111827;
-				--color-font-body: #F8FAFC;
-				--color-bg-board: #F1F5F9;
-				--color-bg-cell: #253351;
-			}
-		}
+
 		body {
 			height: 100vh;
 			width: 100vw;
@@ -223,25 +226,30 @@
 			line-height: 1.5;
 			background-color: var(--color-bg-cell);
 			overflow: hidden;
-		}
-		.cell .wrapper {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			line-height: 1.5;
-			transition: transform 2s ease;
-			transform: translateY(0);
-		}
-		.cell .wrapper span {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			min-height: 100%;
-			line-height: 1.5;
-		}
-		.cell.blank.done {
-			color: var(--color-bg-cell);
+
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				line-height: 1.5;
+				transition: transform 2s ease;
+				transform: translateY(0);
+
+				span {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					min-height: 100%;
+					line-height: 1.5;
+				}
+			}
+
+			&.blank {
+				&.done {
+					color: var(--color-bg-cell);
+				}
+			}
 		}
 		button {
 			position: absolute;
@@ -266,8 +274,7 @@
 					}, 1000)
 				}
 
-				const range = [0,1,2,3,4,5,6,7,8,9]
-				const shuffle = () => range.sort(() => Math.random() - 0.5)
+				const shuffle = () => [0,1,2,3,4,5,6,7,8,9].sort(() => Math.random() - 0.5)
 
 				const cells = document.querySelectorAll('.cell')
 
