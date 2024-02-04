@@ -1,4 +1,0 @@
-#Robots.txt file for drim.io
-
-User-agent: *
-Allow: /
