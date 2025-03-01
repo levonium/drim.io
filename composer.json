@@ -1,0 +1,16 @@
+{
+    "name": "levonium/drim.io",
+    "type": "project",
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "levonium",
+            "email": "levon@drim.io"
+        }
+    ],
+    "require": {}
+}

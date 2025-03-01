@@ -1,0 +1,20 @@
+{
+  "name": "drim.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./app.css --watch",
+    "copy-icons": "rm -rf ./resources/svg/ && mkdir -p ./resources/svg/ && cp -r ./node_modules/lucide-static/icons/*.svg ./resources/svg/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.8",
+    "tailwindcss": "^4.0.8"
+  },
+  "dependencies": {
+    "lucide-static": "^0.473.0"
+  }
+}
