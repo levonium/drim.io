@@ -2,7 +2,7 @@
 ?>
 
 <header class="section py-6 sm:py-8 flex items-center justify-between">
-    <h1 class="font-bold text-3xl">
+    <h1 class="font-heading font-bold text-white text-3xl">
         <a href="/">DRIM.IO</a>
     </h1>
 
