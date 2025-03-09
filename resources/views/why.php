@@ -1,8 +1,9 @@
 <?php
 ?>
 
-<section id="why" class="full-section bg-violet-50 text-slate-900">
-    <div class="py-24 px-3 sm:px-0">
+<section id="why" class="section bg-white">
+    <div class="px-3 sm:px-0">
+
         <h3 class="mb-16 text-2xl lg:text-5xl font-heading font-bold tracking-tight">
             I keep things simple
 
@@ -16,7 +17,7 @@
             <div class="hidden lg:flex justify-center lg:w-1/2 lg:justify-end lg:pr-12 overflow-hidden lg:overflow-visible">
                 <div class="w-[33rem] flex-none lg:w-[45rem]">
                     <div class="justify-center lg:justify-end relative flex aspect-qsuare w-full grayscale">
-                        <svg viewBox="0 0 655 680" fill="none" class="h-full">
+                        <svg viewBox="0 0 655 680" fill="none" class="h-full" aria-hidden="true">
                             <g clip-path="url(#:imageclip)" class="group">
                                 <g class="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
                                     <foreignObject width="655" height="680">
@@ -53,6 +54,9 @@
                 <?php } ?>
             </ul>
         </div>
+    </div>
 
+    <div class="pt-48 px-6 sm:px-3 lg:px-0 max-w-7xl">
+        <?php testimonial(testimonials()[1], ''); ?>
     </div>
 </section>

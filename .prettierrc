@@ -1,0 +1,21 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "singleAttributePerLine": false,
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindStylesheet": "./resources/css/style.css",
+  "overrides": [
+    {
+      "files": ["*.php"],
+      "options": {
+        "parser": "html",
+        "tabWidth": 4,
+        "printWidth": 120
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 350 100">
+	<g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+		<path d="M58 80 V10 h15 V80 z" stroke-dasharray="170"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path
+			d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"
+			stroke-dasharray="316.85528564453125"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path d="M78 80 V49.77 C78.5 33.23 91.58 20 108 20 V35 c-8.14 0-14.7 6.6-15 15.12 V80 z"
+			stroke-dasharray="160.4781036376953"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path d="M113 62 V20 h15 V62 z M120.5 79.5 a7.5 7.5 0 1 1 0-15 a7.5 7.5 0 1 1 0 15 z"
+			stroke-dasharray="161.13055419921875"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path d="M133 80 V20 h15 V80 z" stroke-dasharray="150"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path
+			d="M133 80V49.77C133.5 33.23 146.58 20 163 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z"
+			stroke-dasharray="291.17401123046875"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path
+			d="M178 80V49.77C178.5 33.23 191.58 20 208 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z"
+			stroke-dasharray="291.17401123046875"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path d="M250.5 80 a7.5 7.5 0 1 1 0-15 a7.5 7.5 0 1 1 0 15 z M250.5 76.75 a4 4 0 1 1 0-8 a4 4 0 1 1 0 8 z"
+			stroke-dasharray="72.26715850830078"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path d="M263 80 V38 h15 V80  z M270.5 35.5 a7.5 7.5 0 1 1 0-15 a7.5 7.5 0 1 1 0 15 z"
+			stroke-dasharray="161.13079833984375"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+		<path d="M313 80 a30 30 0 1 1 0-60 a30 30 0 1 1 0 60 M313 70 a20 20 0 1 1 0-40 a20 20 0 1 1 0 40 z"
+			stroke-dasharray="314.203857421875"
+			style="stroke-dashoffset: 0px; stroke: rgb(46, 196, 182); fill: rgb(46, 196, 182);"></path>
+	</g>
+</svg>
