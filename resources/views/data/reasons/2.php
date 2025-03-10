@@ -2,11 +2,13 @@
 // $q = 'No-hassle collaboration';
 ?>
 
-<p>
-    No calls, no meetings, no long email threads.
-    Centralized communication and collaboration where you and all your team can always see what's happening.
+<p class="mb-3">
+    Clear, efficient communication through a centralized platform. No endless meetings
+    or scattered email threads. Every update, decision, and progress milestone is
+    documented and visible.
 </p>
 
-<p class="mt-2">
-    You don't even need to ask me about the status of a task, or the progress of the project. It's all right there for everyone to check.
+<p>
+    Track project progress in real-time without having to ask. Everything is transparent
+    and accessible to you and your team whenever you need it.
 </p>

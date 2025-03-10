@@ -3,7 +3,7 @@
 if (! function_exists('projects')) {
     function projects(): array
     {
-        return  [
+        return [
             [
                 'url' => 'learnmarkdown.com',
                 'title' => 'Learn Markdown',
@@ -11,6 +11,7 @@ if (! function_exists('projects')) {
                 'icon' => 'letter-text',
                 'boxColors' => 'bg-brand-200 border-brand-400',
                 'textColor' => 'text-slate-700',
+                'tech' => ['Vue.js'],
             ],
             [
                 'url' => 'descartes-square.levon.dev',
@@ -18,7 +19,8 @@ if (! function_exists('projects')) {
                 'description' => 'Systematically think through a decision by examining its consequences.',
                 'icon' => 'grid-2x2-check',
                 'boxColors' => 'bg-indigo-500 border-indigo-300',
-                'textColor' => 'text-slate-100',
+                'textColor' => 'text-white',
+                'tech' => ['TypeScript'],
             ],
             [
                 'url' => 'encrypt.levon.dev',
@@ -26,7 +28,8 @@ if (! function_exists('projects')) {
                 'description' => 'End-to-end Encrypt and Decrypt Text Content & Files.',
                 'icon' => 'file-lock-2',
                 'boxColors' => 'bg-indigo-500 border-indigo-300',
-                'textColor' => 'text-slate-100',
+                'textColor' => 'text-white',
+                'tech' => ['JavaScript'],
             ],
             [
                 'url' => 'anelik.levon.dev',
@@ -35,14 +38,16 @@ if (! function_exists('projects')) {
                 'icon' => 'square-check-big',
                 'boxColors' => 'bg-brand-200 border-brand-400',
                 'textColor' => 'text-slate-700',
+                'tech' => ['Laravel', 'PHP'],
             ],
             [
                 'url' => 'dinomatic.com',
                 'title' => 'DinoMatic',
                 'description' => 'WordPress Themes and Plugins.',
                 'icon' => 'chevrons-left-right-ellipsis',
-                'boxColors' => 'bg-cyan-700 border-cyan-400',
-                'textColor' => 'text-slate-200',
+                'boxColors' => 'bg-cyan-700 border-cyan-600',
+                'textColor' => 'text-slate-100',
+                'tech' => ['Laravel', 'PHP'],
             ],
             [
                 'url' => 'royalproduction.am',
@@ -51,22 +56,25 @@ if (! function_exists('projects')) {
                 'icon' => 'chevrons-left-right-ellipsis',
                 'boxColors' => 'bg-pink-200 border-pink-300',
                 'textColor' => 'text-slate-700',
+                'tech' => ['HTML', 'CSS'],
             ],
             [
                 'url' => 'manera.am',
                 'title' => 'MANERA',
-                'description' => 'MANERA Creative Agency.',
+                'description' => 'Creative Agency, SMM, Photography.',
                 'icon' => 'chevrons-left-right-ellipsis',
-                'boxColors' => 'bg-blue-500 border-blue-400',
-                'textColor' => 'text-slate-200',
+                'boxColors' => 'bg-blue-600 border-blue-400',
+                'textColor' => 'text-slate-100',
+                'tech' => ['HTML', 'CSS'],
             ],
             [
                 'url' => 'lavetis.es',
                 'title' => 'L\'AVETIS',
-                'description' => 'L\'AVETIS Novias - bridal dresses.',
+                'description' => 'L\'AVETIS Novias - Bridal Dresses.',
                 'icon' => 'chevrons-left-right-ellipsis',
                 'boxColors' => 'bg-orange-200 border-orange-300',
                 'textColor' => 'text-slate-700',
+                'tech' => ['WordPress', 'PHP'],
             ],
         ];
     }
@@ -88,30 +96,13 @@ if (! function_exists('faqs')) {
     function faqs(): array
     {
         return [
-            '1' => 'What is the difference between subscription and one-time payment projects?',
-            '2' => 'Can you attend our team meetings?',
-            '3' => 'What about one-on-one video calls?',
-            '4' => 'How can I explain you something complicated?',
-            '5' => 'When should I not consider hiring you?',
-            '6' => 'I still have a question.'
-        ];
-    }
-}
-
-if (! function_exists('testimonials')) {
-    function testimonials(): array
-    {
-        return [
-            [
-                'id' => '1',
-                'reviewer' => 'David',
-                'position' => 'CEO at MANERA Creative Agency'
-            ],
-            [
-                'id' => '2',
-                'reviewer' => 'Laura',
-                'position' => 'CEO at Royal Production'
-            ],
+            '1' => 'What is the difference between Monthly Development and Project-based work?',
+            '2' => 'How do you handle project changes or new requirements?"',
+            '3' => 'Do you participate in meetings or video calls?',
+            '4' => 'What technologies do you work with?',
+            '5' => 'How do we get started?',
+            '6' => 'When should I not consider hiring you?',
+            '7' => 'I still have a question.',
         ];
     }
 }

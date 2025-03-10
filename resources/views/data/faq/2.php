@@ -1,7 +1,14 @@
 <?php
-// $q = 'Can you attend our team meetings?';
+// $q = 'How do you handle project changes or new requirements?"';
 ?>
 
+<p class="mb-3">
+    <span class="font-bold">For Monthly Development:</span> Changes are part of the natural flow - simply send them
+    over and I'll incorporate them into our ongoing work.
+</p>
+
 <p>
-    No. Sorry, I don't do meetings. However, I'll be happy to check out your meeting notes related to our project and take it from there.
+    <span class="font-bold">For Project-based work:</span> If new requirements arise after we've agreed on the scope,
+    we'll discuss their impact on the timeline and budget before proceeding. This keeps
+    everything transparent and predictable.
 </p>

@@ -1,12 +1,13 @@
 {
   "name": "drim.io",
-  "version": "1.0.0",
+  "version": "50.0.0",
   "description": "My personal website",
   "main": "index.js",
   "scripts": {
-    "watch": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./assets/css/app.css --watch",
-    "build": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./assets/css/app.css --build --minify",
-    "copy-icons": "rm -rf ./resources/svg/ && mkdir -p ./resources/svg/ && cp -r ./node_modules/lucide-static/icons/*.svg ./resources/svg/"
+    "css-watch": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./assets/css/app.css --watch",
+    "css-build": "npx @tailwindcss/cli -i ./resources/css/app.css -o ./assets/css/app.css --build --minify",
+    "copy": "cp -R ./assets ./dist && cp ./root_files/* ./dist",
+    "build": "rm -rf dist && mkdir dist && php build.php && npm run css-build && npm run copy"
   },
   "keywords": [],
   "author": "",

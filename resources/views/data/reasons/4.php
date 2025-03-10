@@ -2,10 +2,12 @@
 // $q = 'No long-term  contracts for subscriptions';
 ?>
 
-<p>Cancel your subscription any time you want, no questions asked!</p>
+<p class="mb-3">
+    Your business needs can change, and your development support should adapt.
+    Cancel or pause your subscription anytime, no questions asked.
+</p>
 
-<p class="mt-2">
-    Life gets in the way?
-    Pause your subscription and use the remaining days when you need them.
-    You won't get that anywhere else.
+<p>
+    Need to take a break? Pause your subscription and resume when you're ready—your
+    unused time is always preserved. Maximum flexibility, minimum commitment.
 </p>

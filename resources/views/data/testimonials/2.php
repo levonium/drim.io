@@ -1,8 +1,8 @@
 <?php
-// David, Royal Production
+// Laura, Royal Production
 ?>
 
-<p class="text-xl/8 italic mb-6">
+<p>
 	We recently had the pleasure of working with Levon to create a website for our agency.
 	From the initial consultation to the final launch, Levon was incredibly professional, responsive, and attentive to our needs.
 	What impressed us most was Levon's ability to listen and adapt.

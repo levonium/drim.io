@@ -1,23 +1,30 @@
 <?php
 ?>
 
-<header id="intro" aria-label="Introduction" class="section flex items-center h-[calc(100vh-92px)] sm:h-[calc(100vh-108px)]">
-	<div>
-		<p class="mb-6 max-w-max mx-auto text-slate-8700 text-center text-lg sm:text-xl capitalize px-6 py-1.5 bg-[#fff1be] border border-[#b060ff]/30 rounded-full">
-			Creating unique fine things that live on the Internet
-		</p>
+<section id="intro" aria-label="Introduction" class="section flex h-[calc(100vh-92px)] min-h-[420px] items-center sm:h-[calc(100vh-108px)]">
+    <div>
+        <p class="text-slate-8700 mx-auto mb-6 max-w-max rounded-full border border-[#b060ff]/30 bg-[#fff1be] px-6 py-1.5 text-center text-lg capitalize sm:text-xl">
+            Building high-performance web solutions since 2010
+        </p>
 
-		<h2 class="mb-12 lg:mb-16 text-center font-heading text-slate-800 text-5xl lg:text-[144px] font-bold tracking-tight">
-			Hi! I'm Levon.
-			<span class="block mt-4 lg:mt-0 text-brand-700 text-4xl lg:text-[124px]">
-				A Web Developer.
-			</span>
-		</h2>
+        <h2 class="mb-16 text-center font-heading text-5xl font-bold tracking-tight text-slate-800 lg:text-[144px]">
+            Hi! I'm Levon.
+            <span class="mt-4 block text-4xl text-brand-700 lg:mt-0 lg:text-[124px]">
+                A Web Developer.
+            </span>
+        </h2>
 
-		<div class="lg:hidden px-3">
-			<a href="#pricing" class="button block w-full text-center rounded-full bg-brand-700 text-white">
-				Work with me
-			</a>
-		</div>
-	</div>
-</header>
+        <p class="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-600 sm:text-xl"
+            style="text-rendering: optimizeLegibility"
+            fetchpriority="high">
+            I help businesses and individuals transform their ideas into
+            elegant, efficient, and user-friendly web applications.
+        </p>
+
+        <div class="px-3 lg:hidden">
+            <a href="#pricing" class="button block w-full rounded-full border-2 border-brand-700 text-center text-brand-700">
+                Work with me
+            </a>
+        </div>
+    </div>
+</section>

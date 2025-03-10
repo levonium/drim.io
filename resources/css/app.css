@@ -31,3 +31,8 @@
     @apply cursor-pointer rounded-lg border-0 bg-white px-4 py-2 text-lg font-bold text-slate-800 transition-colors duration-300 ease-linear hover:bg-pink-100;
   }
 }
+
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 5000px;
+}

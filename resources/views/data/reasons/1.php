@@ -3,6 +3,7 @@
 ?>
 
 <p>
-    You want to move fast. So do I!
-    Get answers and results in hours or days, not weeks or months.
+    I understand the value of time in business. You'll get responses within hours,
+    and see tangible progress on your projects within days. No lengthy waiting periods
+    or unclear timelines.
 </p>

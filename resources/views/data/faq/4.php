@@ -1,9 +1,9 @@
 <?php
-// $q = 'How can I explain you something complicated?';
+// $q = 'What technologies do you work with?';
 ?>
 
 <p>
-    You can record a short video and attach it to a message.
-    It's very simple, and it can be very effective.
-    If after that something is not clear, we can set up a quick chat.
+    I specialize in web development using modern PHP and JavaScript/TypeScript ecosystems.
+    Rather than listing specific frameworks, I prefer to discuss your project's needs - I can
+    adapt to most web technologies or suggest the best tool for your specific case.
 </p>

@@ -3,90 +3,97 @@
 
 <section id="about" aria-label="About me" class="section text-lg">
 
-	<div class="mb-48">
+    <div class="mb-48">
 
-		<div class="relative grid grid-cols-2 md:grid-cols-3 items-center gap-x-8 md:gap-x-16 gap-y-16 md:gap-y-32">
-			<div class="overflow-hidden rounded-4xl col-span-2 md:col-span-1">
-				<img src="/assets/images/me.jpg" alt="my photo"
-					class="aspect-3/4 block rounded-4xl transform hover:scale-105 transition-transform duration-300 ease-linear">
-			</div>
+        <div class="relative grid grid-cols-2 md:grid-cols-3 items-center gap-x-8 md:gap-x-16 gap-y-16 md:gap-y-32">
+            <div class="group relative col-span-2 overflow-hidden rounded-4xl md:col-span-1">
+                <img src="/assets/images/me.jpg" alt="Levon - Web Developer" loading="lazy" decoding="async"
+                    class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                <div
+                    class="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p class="text-sm text-white">Currently working from somewhere on planet Earth 🌍</p>
+                </div>
+            </div>
 
-			<div class="relative col-span-2">
-				<h3 class="relative z-10 mb-4 text-3xl font-heading font-bold tracking-tight text-slate-700">
-					A software engineer from planet Earth.
-				</h3>
+            <div class="relative col-span-2">
+                <h3 class="relative z-10 mb-6 font-heading text-3xl font-bold tracking-tight text-slate-700">
+                    Building on the web since 2010
+                </h3>
 
-				<p class="relative z-1 mb-6">
-					I've been doing web development for more than a decade now, and it's still very exciting to me.
-					I love the web and the opportunities it provides,
-					and it's a joy for me to create websites and web applications using different technologies.
-				</p>
+                <p class="relative z-1 mb-6">
+                    With over a decade of web development experience, I've evolved from creating simple calculator
+                    programs to building complex web applications that solve real business problems. The web has changed
+                    dramatically during this time, and I've grown with it, constantly learning and adapting to new technologies and
+                    approaches.
+                </p>
 
-				<p class="mb-6">
-					In the university, we learned Visual Basic.
-					I remember the first time I made a simple calculator program with let's say not so user-friendly
-					interface.
-					It was something out of this world for me.
-					The idea that I could type some characters and see the results on the screen was so thrilling for
-					me, and I wanted to make more.
-					And over they years I've been doing just that - typing characters on my keyboard.
-				</p>
+                <p class="mb-6">
+                    My first encounter with programming was in university with Visual Basic, where I discovered the
+                    thrill of bringing ideas to life through code. That excitement of seeing my code transform into
+                    something useful has never faded - it's only grown stronger. Every project, whether big or small,
+                    still brings that same sense of possibility and achievement.
+                </p>
 
-				<p>
-					Now, instead of simple calculator programs, I make websites and web applications, and instead of
-					Visual Basic, I use a variety of technologies.
-					And the best part is that other people find it so useful that they agree to pay me for that.
-				</p>
+                <p>
+                    Today, I specialize in creating high-performance web solutions that help businesses and individuals
+                    achieve their goals. What makes my work truly rewarding is seeing how these digital solutions
+                    make a real difference in people's businesses. I take pride in writing clean, maintainable code
+                    that stands the test of time and delivers real value to users.
+                </p>
 
-				<?php echo icon(
-				    'sparkles',
-				    'stroke-1 size-24 absolute right-4 md:right-0 -top-8 text-amber-400 z-0 transform -rotate-4',
-				    ['aria-hidden' => 'true']
-				); ?>
-			</div>
+                <?php echo icon(
+                    'sparkles',
+                    'absolute -top-8 right-4 z-0 size-24 -rotate-4 transform stroke-1 text-amber-400 md:right-0',
+                    ['aria-hidden' => 'true']
+                ); ?>
+            </div>
 
-			<div class="relative w-full shrink-0 col-span-2 md:col-span-1">
-				<h3 class="mb-4 text-3xl font-heading font-bold tracking-tight text-slate-700">
-					A nomad in digital era.
-				</h3>
+            <div class="relative col-span-2 w-full shrink-0 md:col-span-1">
+                <h3 class="mb-6 font-heading text-3xl font-bold tracking-tight text-slate-700">
+                    Working remotely, living globally
+                </h3>
 
-				<p class="mb-6">
-					I really enjoy traveling around the world, and I have this probably unrealistic dream of visiting
-					every country on earth.
-					I've been living a nomadic life for many years now, I've still been to a couple of dozen countries
-					only.
-					A lot more to go.
-				</p>
+                <p class="mb-6">
+                    My passion for web development is matched by my love for exploration. I've made the conscious choice
+                    to work remotely while traveling, which allows me to collaborate with clients worldwide while
+                    experiencing different cultures and perspectives.
+                </p>
 
-				<p class="mb-0 italic relative z-1">
-					I love the idea of a flight, and the science that enables that big metal bird fly ~10km above the
-					earth.
-					It's very thrilling and very very scary at the same time.
-				</p>
+                <p class="relative z-1 mb-0 italic">
+                    This lifestyle not only enriches my personal experience but also brings a broader perspective
+                    to my work, helping me create solutions that work effectively across cultural boundaries.
+                </p>
 
-				<?php echo icon(
-				    'plane',
-				    'stroke-[0.5] size-48 absolute -left-24 -bottom-24 text-sky-400 opacity-60 z-0',
-				    ['aria-hidden' => 'true']
-				); ?>
-			</div>
+                <?php echo icon(
+                    'plane',
+                    'absolute -bottom-24 -left-24 z-0 size-48 stroke-[0.5] text-sky-400 opacity-60',
+                    ['aria-hidden' => 'true']
+                ); ?>
+            </div>
 
-			<div class="overflow-hidden rounded-4xl md:col-span-1">
-				<img src="/assets/images/clouds.jpg" alt="alt" width="341" height="455" loading="lazy"
-					class="aspect-3/4 block rounded-4xl transform hover:scale-105 transition-transform duration-300 ease-linear">
-			</div>
-			<div class="overflow-hidden rounded-4xl md:col-span-1">
-				<img src="/assets/images/river.jpg" alt="alt" width="341" height="455" loading="lazy"
-					class="aspect-3/4 block rounded-4xl transform hover:scale-105 transition-transform duration-300 ease-linear">
-			</div>
+            <div class="group overflow-hidden rounded-4xl md:col-span-1">
+                <img src="/assets/images/clouds.jpg" alt="View from above the clouds" loading="lazy" decoding="async"
+                    class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+            </div>
+            <div class="group overflow-hidden rounded-4xl md:col-span-1">
+                <img src="/assets/images/river.jpg" alt="Scenic river view" loading="lazy" decoding="async"
+                    class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+            </div>
+        </div>
+    </div>
 
-			<button
-				class="absolute right-0 bottom-0 text-sky-400 cursor-pointer p-1 bg-white hover:bg-slate-200 rounded-full transition-[background-color] duration-300 ease-linear">
-				<span class="sr-only">Next image</span>
-				<?php echo icon('arrow-right', 'stroke-1 size-12 pointer-events-none', ['aria-hidden' => 'true']); ?>
-			</button>
-		</div>
-	</div>
+    <div class="max-w-5xl px-6 sm:px-12">
+        <div class="mb-6 flex space-x-1">
+            <?php echo implode('', array_map(fn ($i) => icon('star', 'size-6 fill-current text-orange-600', ['aria-hidden' => 'true']), [1, 2, 3, 4, 5])); ?>
+        </div>
 
-	<?php testimonial(testimonials()[0], 'max-w-5xl px-12'); ?>
+        <div class="mb-6 text-lg/8 italic sm:text-xl/8">
+            <?php include BASE_PATH.'/resources/views/data/testimonials/1.php'; ?>
+        </div>
+
+        <p>
+            <span class="font-bold text-slate-700">David,</span>
+            <span class="text-slate-600">CEO at MANERA Creative Agency</span>
+        </p>
+    </div>
 </section>

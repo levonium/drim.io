@@ -1,8 +1,15 @@
 <?php
-// $q = 'What about one-on-one video calls?';
+// $q = 'Do you participate in meetings or video calls?';
 ?>
 
+<p class="mb-3">
+    I've found that meetings often slow down progress and reduce productive development time.
+    Instead, I use clear written communication and detailed documentation to keep projects
+    moving efficiently.
+</p>
+
 <p>
-    There are better ways to work together than participating in video calls, be it a group call or one-on-one.
-    I have been doing this for a long time and we hardly ever need to get into a call. It's way better this way.
+    For complex topics, you can record a quick screen capture or voice message. This approach
+    has proven more effective as it allows for clear communication while maintaining flexibility
+    across different time zones.
 </p>

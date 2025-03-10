@@ -4,18 +4,9 @@
   "semi": false,
   "singleQuote": true,
   "singleAttributePerLine": false,
+  "printWidth": 120,
   "plugins": [
     "prettier-plugin-tailwindcss"
   ],
-  "tailwindStylesheet": "./resources/css/style.css",
-  "overrides": [
-    {
-      "files": ["*.php"],
-      "options": {
-        "parser": "html",
-        "tabWidth": 4,
-        "printWidth": 120
-      }
-    }
-  ]
+  "tailwindStylesheet": "./resources/css/style.css"
 }
