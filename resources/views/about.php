@@ -7,8 +7,31 @@
 
         <div class="relative grid grid-cols-2 md:grid-cols-3 items-center gap-x-8 md:gap-x-16 gap-y-16 md:gap-y-32">
             <div class="group relative col-span-2 overflow-hidden rounded-4xl md:col-span-1">
-                <img src="/assets/images/me.jpg" alt="Levon - Web Developer" loading="lazy" decoding="async"
-                    class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+
+                <picture class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                    <source
+                        type="image/webp"
+                        srcset="/assets/images/me-200.webp 200w,
+                                /assets/images/me-400.webp 400w,
+                                /assets/images/me.webp 500w"
+                        sizes="(max-width: 768px) calc(100vw - 3rem),
+                                (max-width: 1152px) calc((100vw - 3rem)/3),
+                                342px">
+
+                    <img src="/assets/images/me.jpg"
+                        srcset="/assets/images/me-200.jpg 200w,
+                                /assets/images/me-400.jpg 400w,
+                                /assets/images/me.jpg 500w"
+                        sizes="(max-width: 768px) calc(100vw - 3rem),
+                                (max-width: 1152px) calc((100vw - 3rem)/3),
+                                342px"
+                        alt="Levon"
+                        class="rounded-lg"
+                        loading="lazy"
+                        decoding="async"
+                        width="500"
+                        height="667">
+                </picture>
                 <div
                     class="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <p class="text-sm text-white">Currently working from somewhere on planet Earth 🌍</p>
@@ -72,12 +95,56 @@
             </div>
 
             <div class="group overflow-hidden rounded-4xl md:col-span-1">
-                <img src="/assets/images/clouds.jpg" alt="View from above the clouds" loading="lazy" decoding="async"
-                    class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                <picture class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                    <source
+                        type="image/webp"
+                        srcset="/assets/images/clouds-200.webp 200w,
+                                /assets/images/clouds-400.webp 400w,
+                                /assets/images/clouds.webp 500w"
+                        sizes="(max-width: 768px) calc(100vw - 3rem),
+                                (max-width: 1152px) calc((100vw - 3rem)/3),
+                                342px">
+
+                    <img src="/assets/images/clouds.jpg"
+                        srcset="/assets/images/clouds-200.jpg 200w,
+                                /assets/images/clouds-400.jpg 400w,
+                                /assets/images/clouds.jpg 500w"
+                        sizes="(max-width: 768px) calc(100vw - 3rem),
+                                (max-width: 1152px) calc((100vw - 3rem)/3),
+                                342px"
+                        alt="View from above the clouds"
+                        class="rounded-lg"
+                        loading="lazy"
+                        decoding="async"
+                        width="500"
+                        height="667">
+                </picture>
             </div>
             <div class="group overflow-hidden rounded-4xl md:col-span-1">
-                <img src="/assets/images/river.jpg" alt="Scenic river view" loading="lazy" decoding="async"
-                    class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                <picture class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                    <source
+                        type="image/webp"
+                        srcset="/assets/images/river-200.webp 200w,
+                                /assets/images/river-400.webp 400w,
+                                /assets/images/river.webp 500w"
+                        sizes="(max-width: 768px) calc(100vw - 3rem),
+                                (max-width: 1152px) calc((100vw - 3rem)/3),
+                                342px">
+
+                    <img src="/assets/images/river.jpg"
+                        srcset="/assets/images/river-200.jpg 200w,
+                                /assets/images/river-400.jpg 400w,
+                                /assets/images/river.jpg 500w"
+                        sizes="(max-width: 768px) calc(100vw - 3rem),
+                                (max-width: 1152px) calc((100vw - 3rem)/3),
+                                342px"
+                        alt="Scenic river view"
+                        class="rounded-lg"
+                        loading="lazy"
+                        decoding="async"
+                        width="500"
+                        height="667">
+                </picture>
             </div>
         </div>
     </div>
