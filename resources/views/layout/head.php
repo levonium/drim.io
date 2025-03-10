@@ -12,7 +12,6 @@
 
     <link rel="preload" href="/assets/css/app.css" as="style">
     <link rel="preload" href="/assets/js/app.js" as="script">
-    <link rel="preload" href="/assets/images/me.jpg" as="image">
 
     <meta http-equiv="Cache-Control" content="max-age=31536000">
     <meta http-equiv="Content-Security-Policy"
@@ -39,7 +38,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/images/levon.png">
 
-    <link href="/assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/app.css?v=<?php echo VERSION; ?>" rel="stylesheet">
 
     <script type="application/ld+json">
     {

@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 require __DIR__.'/vendor/autoload.php';
+const VERSION = '1.0.0';
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +29,6 @@ require __DIR__.'/vendor/autoload.php';
 
     <aside class="contacts below-fold"></aside>
 
-    <script src="/assets/js/app.js" defer></script>
+    <script src="/assets/js/app.js?v=<?php echo VERSION; ?>" defer></script>
 </body>
 </html>
