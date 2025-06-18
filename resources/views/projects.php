@@ -45,7 +45,7 @@
                         alt="Screenshot of <?php echo $project['title']; ?>"
                         loading="lazy"
                         decoding="async"
-                        class="mt-8 ml-16 aspect-3/2 h-full w-full rounded-t-3xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
+                        class="mt-8 ml-16 aspect-3/2 w-full rounded-t-3xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
                 </a>
             <?php } ?>
 
@@ -78,7 +78,7 @@
 
                     <img src="/assets/images/<?php echo $project['url']; ?>.webp"
                         alt="Screenshot of <?php echo $project['title']; ?>" loading="lazy" decoding="async"
-                        class="ml-6 aspect-3/2 h-full w-full rounded-t-xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
+                        class="ml-6 aspect-3/2 w-full rounded-t-xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
                 </a>
             <?php } ?>
         </div>
