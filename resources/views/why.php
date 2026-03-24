@@ -56,19 +56,4 @@
             </ul>
         </div>
     </div>
-
-    <div class="mt-16 px-6">
-        <div class="mb-6 flex space-x-1">
-            <?php echo implode('', array_map(fn ($i) => icon('star', 'size-6 fill-current text-orange-600', ['aria-hidden' => 'true']), range(1, 5))); ?>
-        </div>
-
-        <div class="mb-6 text-lg/8 italic sm:text-xl/8">
-            <?php include BASE_PATH.'/resources/views/data/testimonials/2.php'; ?>
-        </div>
-
-        <p>
-            <span class="font-bold text-slate-700">Laura,</span>
-            <span class="text-slate-600">CEO at Royal Production</span>
-        </p>
-    </div>
 </section>

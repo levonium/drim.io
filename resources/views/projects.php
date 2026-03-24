@@ -13,7 +13,7 @@
 
         <div class="mb-12 grid grid-cols-2 gap-16 sm:grid-cols-4">
 
-            <?php foreach (array_slice(projects(), 0, 4) as $project) { ?>
+            <?php foreach (array_slice(projects(), 0, 2) as $project) { ?>
 
                 <a href="<?php echo 'https://'.$project['url']; ?>"
                     target="_blank"
@@ -45,11 +45,11 @@
                         alt="Screenshot of <?php echo $project['title']; ?>"
                         loading="lazy"
                         decoding="async"
-                        class="mt-8 ml-16 aspect-3/2 h-full w-full rounded-t-3xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
+                        class="mt-8 ml-16 aspect-3/2 w-full rounded-t-3xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
                 </a>
             <?php } ?>
 
-            <?php foreach (array_slice(projects(), 4) as $project) { ?>
+            <?php foreach (array_slice(projects(), 2) as $project) { ?>
 
                 <a href="<?php echo 'https://'.$project['url']; ?>"
                     target="_blank"
@@ -78,7 +78,7 @@
 
                     <img src="/assets/images/<?php echo $project['url']; ?>.webp"
                         alt="Screenshot of <?php echo $project['title']; ?>" loading="lazy" decoding="async"
-                        class="ml-6 aspect-3/2 h-full w-full rounded-t-xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
+                        class="ml-6 aspect-3/2 w-full rounded-t-xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
                 </a>
             <?php } ?>
         </div>
