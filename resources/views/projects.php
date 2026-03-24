@@ -13,7 +13,7 @@
 
         <div class="mb-12 grid grid-cols-2 gap-16 sm:grid-cols-4">
 
-            <?php foreach (array_slice(projects(), 0, 4) as $project) { ?>
+            <?php foreach (array_slice(projects(), 0, 2) as $project) { ?>
 
                 <a href="<?php echo 'https://'.$project['url']; ?>"
                     target="_blank"
@@ -49,7 +49,7 @@
                 </a>
             <?php } ?>
 
-            <?php foreach (array_slice(projects(), 4) as $project) { ?>
+            <?php foreach (array_slice(projects(), 2) as $project) { ?>
 
                 <a href="<?php echo 'https://'.$project['url']; ?>"
                     target="_blank"

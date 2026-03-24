@@ -148,19 +148,4 @@
             </div>
         </div>
     </div>
-
-    <div class="max-w-5xl px-6 sm:px-12">
-        <div class="mb-6 flex space-x-1">
-            <?php echo implode('', array_map(fn ($i) => icon('star', 'size-6 fill-current text-orange-600', ['aria-hidden' => 'true']), [1, 2, 3, 4, 5])); ?>
-        </div>
-
-        <div class="mb-6 text-lg/8 italic sm:text-xl/8">
-            <?php include BASE_PATH.'/resources/views/data/testimonials/1.php'; ?>
-        </div>
-
-        <p>
-            <span class="font-bold text-slate-700">David,</span>
-            <span class="text-slate-600">CEO at MANERA Creative Agency</span>
-        </p>
-    </div>
 </section>
