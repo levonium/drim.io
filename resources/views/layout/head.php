@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- production only  -->
-    <!-- <base href="https://drim.io"> -->
+    <base href="https://drim.io">
 
     <link rel="preload" href="/assets/css/app.css" as="style">
     <link rel="preload" href="/assets/js/app.js" as="script">
