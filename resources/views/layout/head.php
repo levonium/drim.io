@@ -79,15 +79,6 @@
                 "offers": [
                     {
                         "@type": "Offer",
-                        "name": "Monthly Development",
-                        "price": "2400",
-                        "priceCurrency": "EUR",
-                        "description": "Monthly web development subscription service",
-                        "availability": "https://schema.org/InStock",
-                        "priceValidUntil": "2024-12-31"
-                    },
-                    {
-                        "@type": "Offer",
                         "name": "Project-based Development",
                         "description": "Custom web development projects with one-time payment",
                         "availability": "https://schema.org/InStock",
