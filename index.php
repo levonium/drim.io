@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 require __DIR__.'/vendor/autoload.php';
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,6 @@ const VERSION = '1.0.0';
             <?php include_once 'resources/views/about.php'; ?>
             <?php include_once 'resources/views/projects.php'; ?>
             <?php include_once 'resources/views/why.php'; ?>
-            <?php include_once 'resources/views/pricing.php'; ?>
         </article>
     </main>
 
@@ -31,4 +30,5 @@ const VERSION = '1.0.0';
 
     <script src="/assets/js/app.js?v=<?php echo VERSION; ?>" defer></script>
 </body>
+
 </html>

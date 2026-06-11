@@ -18,7 +18,7 @@
                 <a href="<?php echo 'https://'.$project['url']; ?>"
                     target="_blank"
                     rel="noopener"
-                    class="group <?php echo $project['boxColors']; ?> col-span-2 block overflow-hidden rounded-2xl border transition-transform duration-300 ease-linear hover:-translate-y-4"
+                    class="group <?php echo $project['boxColors']; ?> col-span-2 block overflow-hidden 2xl border transition-transform duration-300 ease-linear hover:-translate-y-4"
                     aria-label="Visit <?php echo $project['title']; ?>">
 
                     <div class="p-8">
@@ -27,14 +27,6 @@
                             <?php echo icon($project['icon'], 'mb-4 size-12 stroke-1 text-violet-950', ['aria-hidden' => 'true']); ?>
                             <?php echo $project['title']; ?>
                         </h4>
-
-                        <div class="mb-4 flex flex-wrap gap-2">
-                            <?php foreach ($project['tech'] ?? [] as $tech) { ?>
-                                <span class="<?php echo $project['textColor']; ?> rounded-full bg-slate-800/10 px-2 py-1 text-xs">
-                                    <?php echo $tech; ?>
-                                </span>
-                            <?php } ?>
-                        </div>
 
                         <p class="<?php echo $project['textColor']; ?>">
                             <?php echo $project['description']; ?>
@@ -45,7 +37,7 @@
                         alt="Screenshot of <?php echo $project['title']; ?>"
                         loading="lazy"
                         decoding="async"
-                        class="mt-8 ml-16 aspect-3/2 w-full rounded-t-3xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
+                        class="mt-8 ml-16 aspect-3/2 w-full t-3xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
                 </a>
             <?php } ?>
 
@@ -54,7 +46,7 @@
                 <a href="<?php echo 'https://'.$project['url']; ?>"
                     target="_blank"
                     rel="noopener"
-                    class="group <?php echo $project['boxColors']; ?> col-span-2 block overflow-hidden rounded-2xl border transition-transform duration-300 ease-linear hover:-translate-y-4 md:col-span-1">
+                    class="group <?php echo $project['boxColors']; ?> col-span-2 block overflow-hidden 2xl border transition-transform duration-300 ease-linear hover:-translate-y-4 md:col-span-1">
 
                     <div class="p-4">
                         <h4
@@ -63,14 +55,6 @@
                             <?php echo $project['title']; ?>
                         </h4>
 
-                        <div class="mb-4 flex flex-wrap gap-2">
-                            <?php foreach ($project['tech'] ?? [] as $tech) { ?>
-                                <span class="<?php echo $project['textColor']; ?> rounded-full bg-slate-800/20 px-2 py-1 text-xs">
-                                    <?php echo $tech; ?>
-                                </span>
-                            <?php } ?>
-                        </div>
-
                         <p class="<?php echo $project['textColor']; ?> text-sm">
                             <?php echo $project['description']; ?>
                         </p>
@@ -78,7 +62,7 @@
 
                     <img src="/assets/images/<?php echo $project['url']; ?>.webp"
                         alt="Screenshot of <?php echo $project['title']; ?>" loading="lazy" decoding="async"
-                        class="ml-6 aspect-3/2 w-full rounded-t-xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
+                        class="ml-6 aspect-3/2 w-full t-xl transition-transform duration-300 ease-linear group-hover:translate-y-4">
                 </a>
             <?php } ?>
         </div>

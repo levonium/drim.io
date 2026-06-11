@@ -5,7 +5,7 @@
     <div>
         <div class="flex items-center justify-center space-x-2 sm:space-x-4">
             <a href="#"
-                class="flex items-center space-x-1 p-1 sm:p-2 text-xs sm:text-sm font-lighter hover:bg-pink-300 rounded">
+                class="flex items-center space-x-1 p-1 sm:p-2 text-xs sm:text-sm font-lighter hover:bg-pink-300 ">
                 <?php echo icon('arrow-up', 'size-4 text-slate-500', ['aria-hidden' => 'true']); ?>
                 <span>DRIM.IO</span>
             </a>
@@ -13,7 +13,7 @@
             <span class="text-pink-200" aria-hidden="true">&middot;</span>
 
             <a href="#contact"
-                class="flex items-center space-x-1 p-1 sm:p-2 text-xs sm:text-sm font-lighter hover:bg-pink-300 rounded">
+                class="flex items-center space-x-1 p-1 sm:p-2 text-xs sm:text-sm font-lighter hover:bg-pink-300 ">
                 <?php echo icon('heart-handshake', 'size-4 text-slate-500', ['aria-hidden' => 'true']); ?>
                 <span>WORK WITH ME</span>
             </a>
@@ -21,7 +21,7 @@
             <span class="text-pink-200" aria-hidden="true">&middot;</span>
 
             <a href="https://github.com/levonium/drim.io"
-                class="flex items-center space-x-1 p-1 sm:p-2 text-xs sm:text-sm font-lighter hover:bg-pink-300 rounded">
+                class="flex items-center space-x-1 p-1 sm:p-2 text-xs sm:text-sm font-lighter hover:bg-pink-300 ">
                 <?php echo icon('github', 'size-4 text-slate-500', ['aria-hidden' => 'true']); ?>
                 <span>GITHUB</span>
             </a>

@@ -22,5 +22,3 @@ npm run build
 This will run a PHP script that will generate a static `index.html` file in the `dist` directory.
 
 It will also copy all necessary files to `dist`.
-
-Then you just drag and drop the dist directory in Netlify dashboard :-)

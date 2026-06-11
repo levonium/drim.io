@@ -6,9 +6,9 @@
     <div class="mb-48">
 
         <div class="relative grid grid-cols-2 md:grid-cols-3 items-center gap-x-8 md:gap-x-16 gap-y-16 md:gap-y-32">
-            <div class="group relative col-span-2 overflow-hidden rounded-4xl md:col-span-1">
+            <div class="group relative col-span-2 overflow-hidden 4xl md:col-span-1">
 
-                <picture class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+                <picture class="block aspect-3/4 h-full w-full transform 4xl transition-transform duration-300 ease-linear group-hover:scale-105">
                     <source
                         type="image/webp"
                         srcset="/assets/images/me-200.webp 200w,
@@ -26,7 +26,7 @@
                                 (max-width: 1152px) calc((100vw - 3rem)/3),
                                 342px"
                         alt="Levon"
-                        class="rounded-lg"
+                        class="lg"
                         loading="lazy"
                         decoding="async"
                         width="500"
@@ -94,8 +94,8 @@
                 ); ?>
             </div>
 
-            <div class="group overflow-hidden rounded-4xl md:col-span-1">
-                <picture class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+            <div class="group overflow-hidden 4xl md:col-span-1">
+                <picture class="block aspect-3/4 h-full w-full transform 4xl transition-transform duration-300 ease-linear group-hover:scale-105">
                     <source
                         type="image/webp"
                         srcset="/assets/images/clouds-200.webp 200w,
@@ -113,15 +113,15 @@
                                 (max-width: 1152px) calc((100vw - 3rem)/3),
                                 342px"
                         alt="View from above the clouds"
-                        class="rounded-lg"
+                        class="lg"
                         loading="lazy"
                         decoding="async"
                         width="500"
                         height="667">
                 </picture>
             </div>
-            <div class="group overflow-hidden rounded-4xl md:col-span-1">
-                <picture class="block aspect-3/4 h-full w-full transform rounded-4xl transition-transform duration-300 ease-linear group-hover:scale-105">
+            <div class="group overflow-hidden 4xl md:col-span-1">
+                <picture class="block aspect-3/4 h-full w-full transform 4xl transition-transform duration-300 ease-linear group-hover:scale-105">
                     <source
                         type="image/webp"
                         srcset="/assets/images/river-200.webp 200w,
@@ -139,7 +139,7 @@
                                 (max-width: 1152px) calc((100vw - 3rem)/3),
                                 342px"
                         alt="Scenic river view"
-                        class="rounded-lg"
+                        class="lg"
                         loading="lazy"
                         decoding="async"
                         width="500"

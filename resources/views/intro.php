@@ -3,7 +3,7 @@
 
 <section id="intro" aria-label="Introduction" class="section flex h-[calc(100vh-92px)] min-h-[420px] items-center sm:h-[calc(100vh-108px)]">
     <div>
-        <p class="text-slate-8700 mx-auto mb-6 max-w-max rounded-full border border-[#b060ff]/30 bg-[#fff1be] px-6 py-1.5 text-center text-lg capitalize sm:text-xl">
+        <p class="text-slate-8700 mx-auto mb-6 max-w-max full border border-[#b060ff]/30 bg-[#fff1be] px-6 py-1.5 text-center text-lg capitalize sm:text-xl">
             Building high-performance web solutions since 2010
         </p>
 
@@ -22,7 +22,7 @@
         </p>
 
         <div class="px-3 lg:hidden">
-            <a href="#pricing" class="button block w-full rounded-full border-2 border-brand-700 text-center text-brand-700">
+            <a href="#contact" class="button block w-full full border-2 border-brand-700 text-center text-brand-700">
                 Work with me
             </a>
         </div>

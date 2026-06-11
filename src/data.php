@@ -5,6 +5,15 @@ if (! function_exists('projects')) {
     {
         return [
             [
+                'url' => 'tablrr.app',
+                'title' => 'tablrr.app',
+                'description' => 'Centralized listing management for affiliates.',
+                'icon' => 'chevrons-left-right-ellipsis',
+                'boxColors' => 'bg-cyan-700 border-cyan-600',
+                'textColor' => 'text-slate-100',
+                'tech' => ['Laravel', 'PHP', 'Vue.js'],
+            ],
+            [
                 'url' => 'dinomatic.com',
                 'title' => 'DinoMatic',
                 'description' => 'WordPress Themes and Plugins.',
@@ -14,13 +23,13 @@ if (! function_exists('projects')) {
                 'tech' => ['Laravel', 'PHP'],
             ],
             [
-                'url' => 'tablrr.app',
-                'title' => 'tablrr.app',
-                'description' => 'Centralized listing management.',
-                'icon' => 'chevrons-left-right-ellipsis',
-                'boxColors' => 'bg-cyan-700 border-cyan-600',
-                'textColor' => 'text-slate-100',
-                'tech' => ['Laravel', 'PHP', 'Vue.js'],
+                'url' => 'seocentury.com',
+                'title' => 'SEO Century',
+                'description' => 'The agency that puts you first on every search',
+                'icon' => 'search',
+                'boxColors' => 'bg-brand-200 border-brand-400',
+                'textColor' => 'text-slate-700',
+                'tech' => ['JavaScript'],
             ],
             [
                 'url' => 'learnmarkdown.com',
@@ -49,15 +58,6 @@ if (! function_exists('projects')) {
                 'textColor' => 'text-white',
                 'tech' => ['JavaScript'],
             ],
-            [
-                'url' => 'anelik.levon.dev',
-                'title' => 'Anelik',
-                'description' => 'A simple web app for project management.',
-                'icon' => 'square-check-big',
-                'boxColors' => 'bg-brand-200 border-brand-400',
-                'textColor' => 'text-slate-700',
-                'tech' => ['Laravel', 'PHP'],
-            ],
         ];
     }
 }
@@ -70,21 +70,6 @@ if (! function_exists('reasons')) {
             '2' => 'No-hassle collaboration',
             '3' => '100% satisfaction guaranteed',
             '4' => 'No long-term contracts for subscriptions',
-        ];
-    }
-}
-
-if (! function_exists('faqs')) {
-    function faqs(): array
-    {
-        return [
-            '1' => 'What is the difference between Monthly Development and Project-based work?',
-            '2' => 'How do you handle project changes or new requirements?"',
-            '3' => 'Do you participate in meetings or video calls?',
-            '4' => 'What technologies do you work with?',
-            '5' => 'How do we get started?',
-            '6' => 'When should I not consider hiring you?',
-            '7' => 'I still have a question.',
         ];
     }
 }

@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- production only
-    <base href="https://drim.io">
-    <script defer data-domain="drim.io" src="https://plausible.io/js/script.js"></script>
-    end production only -->
+    <!-- production only  -->
+    <!-- <base href="https://drim.io"> -->
 
     <link rel="preload" href="/assets/css/app.css" as="style">
     <link rel="preload" href="/assets/js/app.js" as="script">
 
     <meta http-equiv="Cache-Control" content="max-age=31536000">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' plausible.io; img-src 'self' https:; font-src 'self' fonts.bunny.net; style-src 'self' fonts.bunny.net 'unsafe-inline'; connect-src 'self' plausible.io">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <link rel="canonical" href="https://drim.io">

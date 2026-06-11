@@ -11,7 +11,7 @@
             <a href="/">DRIM.IO</a>
         </h1>
 
-        <a href="#pricing" class="button hidden lg:block">
+        <a href="#contact" class="button hidden lg:block">
             Work with me
         </a>
     </div>

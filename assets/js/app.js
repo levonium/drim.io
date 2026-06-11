@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const email =
         window.innerWidth > 640
           ? `<span class="hidden sm:block text-[12vw] font-bold text-slate-800 select-all">${name}@${domain}</span>`
-          : `<a href="mailto:${name}@${domain}" class="block sm:hidden max-w-64 mx-auto mt-6 px-8 py-3 bg-white/90 rounded-full text-slate-800 active:bg-white/70 transition-colors">Send Email</a>`
+          : `<a href="mailto:${name}@${domain}" class="block sm:hidden max-w-64 mx-auto mt-6 px-8 py-3 bg-white/90 full text-slate-800 active:bg-white/70 transition-colors">Send Email</a>`
 
       // Create the element first
       contactsWrapper.innerHTML = `
         <section id="contacts" aria-label="Get in touch"
-          class="h-screen bg-linear-135 sm:bg-linear-105 from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] backdrop-blur-sm rounded-lg opacity-0 transform translate-y-4 transition-all duration-500">
+          class="h-screen bg-linear-135 sm:bg-linear-105 from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] backdrop-blur-sm lg opacity-0 transform translate-y-4 transition-all duration-500">
           <div class="w-full h-full flex items-center justify-center">
               <div class="text-center">
                   <span class="block px-6 text-2xl">Email is probably the best way to reach me.</span>
