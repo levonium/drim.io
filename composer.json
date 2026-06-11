@@ -1,17 +1,17 @@
 {
-    "name": "levonium/drim.io",
-    "type": "project",
-    "autoload": {
-        "files": [
-            "src/functions.php",
-            "src/data.php"
-        ]
-    },
-    "authors": [
-        {
-            "name": "levonium",
-            "email": "levon@drim.io"
-        }
-    ],
-    "require": {}
+  "name": "levonium/drim.io",
+  "type": "project",
+  "autoload": {
+    "files": [
+      "src/functions.php",
+      "src/data.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "levonium",
+      "email": "levon@drim.io"
+    }
+  ],
+  "require": {}
 }
