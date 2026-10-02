@@ -14,8 +14,8 @@ if (! function_exists('projects')) {
                 'tech' => ['Laravel', 'PHP', 'Vue.js'],
             ],
             [
-                'url' => 'dinomatic.com',
-                'title' => 'DinoMatic',
+                'url' => 'affkraft.com',
+                'title' => 'AffKraft',
                 'description' => 'WordPress Themes and Plugins.',
                 'icon' => 'chevrons-left-right-ellipsis',
                 'boxColors' => 'bg-cyan-700 border-cyan-600',
